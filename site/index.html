@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-+SBw3/EqY2lsEVDFULv8iSaXcpK4juX3M2TO2qJk5Vc='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-1rqhQ4Wqm9pJdHQJ9lY53QCQAXjupbxu1i2toYxkgNA='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sean Krofssik | Reporter, Hartford Courant</title>
@@ -81,8 +81,13 @@ section,header{scroll-margin-top:72px}
 .screen .bars{margin-top:1.4cqw;display:grid;gap:.9cqw}
 .screen .bars i{display:block;height:.75cqw;background:#C9CDC6;border-radius:2px}
 .status{position:absolute;left:25.9%;top:57.2%;width:48.2%;font-family:var(--mono);font-size:1.25cqw;color:#555;display:flex;justify-content:space-between;padding-inline:1.6cqw}
-.key{transition:fill .08s}
-.key.hit{fill:#111!important}
+.key{transition:fill .35s ease-out}
+.key.hit{transition:none}
+.key.hit:nth-child(5n+1){fill:#0F6B72!important}
+.key.hit:nth-child(5n+2){fill:#E4572E!important}
+.key.hit:nth-child(5n+3){fill:#F2B134!important}
+.key.hit:nth-child(5n+4){fill:#2E86DE!important}
+.key.hit:nth-child(5n){fill:#6AB04C!important}
 .steam path{stroke-dasharray:6 10;animation:steam 3s linear infinite}
 .steam path:nth-child(2){animation-delay:-1s}.steam path:nth-child(3){animation-delay:-2s}
 @keyframes steam{from{stroke-dashoffset:0;opacity:.9}to{stroke-dashoffset:-64;opacity:.3}}
@@ -470,7 +475,6 @@ function press(ch){
   const words = ["Waterbury","Meriden","Hartford","Wallingford","the courthouse","the ballfield","Main Street","all over Connecticut"];
   const el = document.getElementById("typed"), wc = document.getElementById("wc");
   let wi = 0, count = 0;
-  if (reduce){ el.textContent = "all over Connecticut"; wc.textContent = "Words: 4"; return; }
   const wait = ms => new Promise(r => setTimeout(r, ms));
   let onscreen = true;
   new IntersectionObserver(([e]) => { onscreen = e.isIntersecting; }).observe(document.querySelector(".stage"));
