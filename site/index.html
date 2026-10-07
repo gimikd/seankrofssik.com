@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-+SBw3/EqY2lsEVDFULv8iSaXcpK4juX3M2TO2qJk5Vc='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sean Krofssik | Reporter, Hartford Courant</title>
+<meta name="description" content="Sean Krofssik is a staff reporter at the Hartford Courant covering breaking news, courts, public safety and local business in Connecticut.">
+<link rel="canonical" href="https://seankrofssik.com/">
+<meta name="author" content="Sean Krofssik">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Sean Krofssik">
+<meta property="og:title" content="Sean Krofssik | Reporter, Hartford Courant">
+<meta property="og:description" content="Sean Krofssik is a staff reporter at the Hartford Courant covering breaking news, courts, public safety and local business in Connecticut.">
+<meta property="og:url" content="https://seankrofssik.com/">
+<meta property="og:image" content="https://seankrofssik.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sean Krofssik, reporter at the Hartford Courant, with a sketch of a laptop typing Stories from all over Connecticut">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@SKrofssik">
+<meta name="twitter:title" content="Sean Krofssik | Reporter, Hartford Courant">
+<meta name="twitter:description" content="Sean Krofssik is a staff reporter at the Hartford Courant covering breaking news, courts, public safety and local business in Connecticut.">
+<meta name="twitter:image" content="https://seankrofssik.com/og-image.png">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Sean Krofssik", "jobTitle": "Staff Reporter", "worksFor": {"@type": "NewsMediaOrganization", "name": "Hartford Courant", "url": "https://www.courant.com/"}, "homeLocation": {"@type": "Place", "name": "Waterbury, Connecticut"}, "url": "https://seankrofssik.com/", "image": "https://seankrofssik.com/og-image.png", "sameAs": ["https://x.com/SKrofssik", "https://muckrack.com/sean-krofssik", "https://www.courant.com/author/sean-krofssik/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Barlow+Condensed:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* One committed look: black ink on white paper, like a pen sketch. */
+:root{
+  --paper:#FFFFFF; --wash:#F4F4F2; --ink:#111111; --ink-2:#3D3D3D; --ink-3:#6A6A6A; --line:#1A1A1A; --soft:#D6D6D2;
+  --accent:#0F6B72; --accent-2:#0B5359;
+  --slab:"Zilla Slab", Rockwell, Georgia, serif;
+  --cond:"Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --sans:"Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --mono:"IBM Plex Mono", Consolas, Menlo, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:24px}
+@media (max-width:600px){.wrap{padding-inline:16px}}
+section,header{scroll-margin-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition:none!important}}
+
+/* ---------- Top bar ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:#000;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{text-decoration:none;font-family:var(--slab);line-height:1.1}
+.brand b{display:block;font-size:20px;font-weight:700}
+.brand span{font-size:15px;font-weight:500;color:#D9D9D9}
+.menu{display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
+.menu a{text-decoration:none;font-size:16px;padding:8px 12px;border-radius:4px;color:#EDEDED;position:relative}
+.menu a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.menu a:hover::after{transform:scaleX(1)}
+.burger{display:none;background:none;border:1px solid #666;color:#fff;font:600 14px var(--sans);padding:8px 12px;border-radius:4px;cursor:pointer}
+@media (max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;background:#000;flex-direction:column;padding:8px 16px 16px;border-top:1px solid #333}
+  .menu.open{display:flex;animation:drop .25s ease}
+  .menu a{padding:12px 4px;border-bottom:1px solid #222}
+}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* ---------- Hero: sketched laptop ---------- */
+.hero{padding-block:26px 8px}
+.stage{position:relative;max-width:900px;margin:0 auto;container-type:inline-size}
+.stage svg{display:block;width:100%;height:auto}
+.screen{position:absolute;left:25.9%;top:18.6%;width:48.2%;height:38.5%;padding:1.2cqw 1.6cqw;font-family:var(--mono);color:#1b1b1b;overflow:hidden}
+.screen .l1{font-size:3.1cqw;font-weight:600;line-height:1.2;margin:0}
+.screen .l2{font-size:3.1cqw;font-weight:600;line-height:1.3;margin:0;color:var(--accent);min-height:1.3em;white-space:nowrap}
+.cursor{display:inline-block;width:.55em;height:1em;background:var(--ink);vertical-align:-.12em;margin-left:1px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.screen .bars{margin-top:1.4cqw;display:grid;gap:.9cqw}
+.screen .bars i{display:block;height:.75cqw;background:#C9CDC6;border-radius:2px}
+.status{position:absolute;left:25.9%;top:57.2%;width:48.2%;font-family:var(--mono);font-size:1.25cqw;color:#555;display:flex;justify-content:space-between;padding-inline:1.6cqw}
+.key{transition:fill .08s}
+.key.hit{fill:#111!important}
+.steam path{stroke-dasharray:6 10;animation:steam 3s linear infinite}
+.steam path:nth-child(2){animation-delay:-1s}.steam path:nth-child(3){animation-delay:-2s}
+@keyframes steam{from{stroke-dashoffset:0;opacity:.9}to{stroke-dashoffset:-64;opacity:.3}}
+.led{animation:led 2.4s ease-in-out infinite}
+@keyframes led{50%{opacity:.25}}
+
+/* ---------- Boxes ---------- */
+.box{border:1.5px solid var(--line);padding:clamp(22px,4vw,44px);margin-top:26px;background:var(--paper)}
+.box h2{font-family:var(--cond);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(28px,3.4vw,36px);line-height:1.15;text-align:center;margin:0 0 12px}
+.title-box h1{font-family:var(--cond);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(28px,4vw,42px);line-height:1.2;text-align:center;margin:0;text-wrap:balance}
+.title-box p{text-align:center;margin:8px 0 0;color:var(--ink-3);font-size:17px}
+.lead{text-align:center;max-width:62ch;margin:0 auto 26px;color:var(--ink-2)}
+
+/* ---------- Tabs ---------- */
+.tabs{position:relative;display:flex;gap:4px;overflow-x:auto;border-bottom:1.5px solid var(--soft);scrollbar-width:none;margin-bottom:22px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;background:none;border:0;font:600 15px var(--sans);color:var(--ink-3);padding:12px 14px;cursor:pointer;white-space:nowrap;transition:color .2s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink)}
+.tab .n{font-family:var(--mono);font-size:12px;font-weight:400;margin-left:6px;color:var(--ink-3)}
+.ind{position:absolute;left:0;bottom:-1.5px;width:100px;height:3px;background:var(--ink);transform-origin:0 0;transition:transform .32s cubic-bezier(.4,0,.2,1);will-change:transform}
+.panel{animation:fadein .35s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* article cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--soft)}
+@media (max-width:720px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:6px;padding:20px 22px 22px;border-bottom:1px solid var(--soft);text-decoration:none;opacity:0;animation:rise .45s ease forwards;transition:background .2s}
+.card:nth-child(odd){border-right:1px solid var(--soft)}
+@media (max-width:720px){.card:nth-child(odd){border-right:0}.card{padding-inline:4px}}
+.card:hover{background:var(--wash)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.card .out{font-family:var(--cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:15px;color:var(--ink-3)}
+.card h3{margin:0;font-family:var(--slab);font-weight:600;font-size:22px;line-height:1.25;text-wrap:pretty}
+.card time{font-size:15px;color:var(--ink-3)}
+.card .go{margin-top:4px;font-weight:600;font-size:15px;color:var(--accent)}
+.card .go span{display:inline-block;transition:transform .2s}
+.card:hover .go span{transform:translateX(4px)}
+.more{display:block;margin:22px auto 0;background:#000;color:#fff;border:0;font:600 14px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:14px 22px;cursor:pointer}
+.more:hover{background:var(--accent)}
+
+/* career panels */
+.career{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:760px){.career{grid-template-columns:1fr}}
+.yrs{font-family:var(--cond);font-weight:600;font-size:clamp(44px,6vw,64px);line-height:1;margin:0}
+.role{font-family:var(--slab);font-weight:600;font-size:22px;margin:8px 0 0}
+.place{color:var(--ink-3);margin:2px 0 0;font-size:16px}
+.career p{margin:0 0 12px}
+.career ul{margin:6px 0 0;padding-left:20px}
+.career li{margin-bottom:6px}
+.career a{color:var(--accent)}
+
+/* quotes carousel */
+.quotes{position:relative;max-width:760px;margin:0 auto;min-height:150px}
+.qslide{text-align:center;margin:0}
+.qslide blockquote{margin:0;font-family:var(--slab);font-weight:500;font-size:clamp(26px,3.4vw,36px);line-height:1.25}
+.qslide figcaption{margin-top:14px;color:var(--ink-3);font-size:16px}
+.qslide figcaption a{color:var(--accent)}
+.qslide.in{animation:qin .5s ease}
+@keyframes qin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+.dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.dot[aria-current="true"]{background:var(--ink);transform:scale(1.15)}
+.progress{height:2px;background:var(--soft);margin:18px auto 0;max-width:200px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ink);width:0}
+.progress i.run{animation:prog 6s linear forwards}
+@keyframes prog{to{width:100%}}
+
+/* bio */
+.bio{max-width:68ch;margin:0 auto}
+.bio p{margin:0 0 14px}
+.bio .rest{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+.bio .rest > div{overflow:hidden}
+.bio.open .rest{grid-template-rows:1fr}
+.link-btn{background:none;border:0;padding:0;font:600 15px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;color:var(--ink);border-bottom:2px solid var(--ink)}
+.link-btn:hover{color:var(--accent);border-color:var(--accent)}
+
+/* contact */
+.contact{text-align:center}
+.contact p{max-width:58ch;margin:0 auto 20px;color:var(--ink-2)}
+.btnrow{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;text-decoration:none;background:#000;color:#fff;font:600 14px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:14px 22px;border:1.5px solid #000;transition:background .2s,color .2s}
+.btn:hover{background:var(--accent);border-color:var(--accent)}
+.btn.alt{background:#fff;color:#000}
+.btn.alt:hover{background:#000;color:#fff}
+
+footer{background:#000;color:#CFCFCF;margin-top:44px;padding-block:34px 42px;font-size:15px}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px}
+footer nav{display:flex;flex-wrap:wrap;gap:0 18px}
+footer nav a{display:inline-block;padding:10px 0}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .brand b{font-size:18px}
+.sr{position:absolute;left:-9999px}
+
+/* ---- small-screen + touch polish ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+@media (max-width:640px){
+  .hero{overflow:hidden;padding-top:14px}
+  .stage{width:124%;max-width:none;margin-left:-12%}
+  .box{margin-top:18px}
+  .card{padding:18px 4px}
+}
+@media (min-width:641px) and (max-width:1024px){ .stage{max-width:760px} }
+.dot{width:30px;height:30px;border:0;background:none;position:relative;transform:none!important}
+.dot::before{content:"";position:absolute;inset:10px;border-radius:50%;border:1.5px solid var(--ink);transition:background .2s,transform .2s}
+.dot[aria-current="true"]{background:none}
+.dot[aria-current="true"]::before{background:var(--ink);transform:scale(1.15)}
+.dots{gap:2px}
+.link-btn{padding:10px 0 4px}
+.quotes{touch-action:pan-y}
+@media (pointer:coarse){ .tab{padding:13px 14px} .menu a{min-height:44px} }
+@media (hover:none){ .card:hover{background:none} .menu a::after{display:none} }
+
+@media (max-width:640px){ .screen .l1,.screen .l2{font-size:3.7cqw} .screen .bars i:nth-child(n+3){display:none} .status{font-size:1.6cqw} }
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home"><b>Sean Krofssik</b><span>Reporter, Hartford Courant</span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#articles">Articles</a>
+      <a href="#career">Career</a>
+      <a href="#quotes">Quotes</a>
+      <a href="#bio">Bio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="home">
+  <!-- HERO -->
+  <section class="hero" aria-label="Stories from Connecticut">
+    <div class="stage">
+      <svg viewBox="0 0 900 520" aria-hidden="true">
+        <defs>
+          <filter id="rough" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter>
+          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="6" stroke="#111" stroke-width="1"/></pattern>
+          <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#111"/></pattern>
+        </defs>
+        <g filter="url(#rough)" stroke="#111" stroke-linejoin="round" stroke-linecap="round">
+          <!-- desk line -->
+          <path d="M20 488 H880" stroke-width="2.5" fill="none"/>
+          <path d="M60 498 H300 M560 498 H840" stroke-width="1.2" fill="none" opacity=".5"/>
+          <!-- lid -->
+          <rect x="196" y="18" width="508" height="338" rx="16" fill="#fff" stroke-width="3"/>
+          <rect x="204" y="26" width="492" height="322" rx="11" fill="none" stroke-width="1.2"/>
+          <path d="M204 60 V310" stroke="url(#hatch)" stroke-width="10" opacity=".35"/>
+          <path d="M696 60 V310" stroke="url(#hatch)" stroke-width="10" opacity=".35"/>
+          <!-- screen window -->
+          <rect x="228" y="52" width="444" height="266" rx="3" fill="#EEF0EB" stroke-width="2.5"/>
+          <rect x="228" y="52" width="444" height="22" fill="#fff" stroke-width="2"/>
+          <circle cx="242" cy="63" r="4.5" fill="#fff" stroke-width="1.5"/><circle cx="256" cy="63" r="4.5" fill="#fff" stroke-width="1.5"/><circle cx="270" cy="63" r="4.5" fill="#fff" stroke-width="1.5"/>
+          <path d="M228 296 H672" stroke-width="1.5" fill="none"/>
+          <!-- lid badge + led -->
+          <rect x="425" y="330" width="50" height="10" rx="5" fill="#fff" stroke-width="1.5"/>
+          <!-- hinge -->
+          <path d="M214 356 H686 L676 366 H224 Z" fill="#fff" stroke-width="2.5"/>
+          <!-- base -->
+          <path d="M170 366 H730 L806 472 Q806 486 792 486 H108 Q94 486 94 472 Z" fill="#fff" stroke-width="3"/>
+          <path d="M98 474 H802" stroke-width="1.5" fill="none"/>
+          <path d="M104 470 L170 370" stroke="url(#hatch)" stroke-width="8" opacity=".25" fill="none"/>
+          <!-- speaker grilles -->
+          
+          <!-- trackpad -->
+          <path d="M400 456 H500 L503 468 H397 Z" fill="#fff" stroke-width="1.8"/>
+          <line x1="450" y1="462" x2="450" y2="468" stroke-width="1" opacity=".5"/>
+          <!-- notebook + pen -->
+          <g transform="translate(18 402) rotate(-7)">
+            <rect x="0" y="0" width="92" height="76" rx="3" fill="#fff" stroke-width="2.2"/>
+            <g fill="#fff" stroke-width="1.4"><circle cx="14" cy="0" r="4"/><circle cx="30" cy="0" r="4"/><circle cx="46" cy="0" r="4"/><circle cx="62" cy="0" r="4"/><circle cx="78" cy="0" r="4"/></g>
+            <path d="M10 22 H80 M10 34 H74 M10 46 H80 M10 58 H56" stroke-width="1" opacity=".55" fill="none"/>
+            <path d="M22 22 q6 -6 10 0 t10 0 t10 0" stroke-width="1.4" fill="none"/>
+            <g transform="translate(58 68) rotate(-38)"><rect x="0" y="-3.5" width="70" height="7" rx="2" fill="#fff" stroke-width="1.6"/><path d="M70 -3.5 L80 0 L70 3.5 Z" fill="#111" stroke-width="1"/><rect x="0" y="-3.5" width="12" height="7" fill="url(#hatch)" stroke-width="1"/></g>
+          </g>
+          <!-- coffee mug -->
+          <g transform="translate(804 404)">
+            <path d="M0 0 H58 V64 Q58 78 44 78 H14 Q0 78 0 64 Z" fill="#fff" stroke-width="2.4"/>
+            <path d="M58 16 Q80 16 80 34 Q80 52 58 52" fill="none" stroke-width="2.4"/>
+            <ellipse cx="29" cy="0" rx="29" ry="6" fill="#fff" stroke-width="2"/>
+            <rect x="8" y="26" width="42" height="26" fill="url(#hatch)" stroke="none" opacity=".35"/>
+          </g>
+        </g>
+        <g id="keys" stroke="#111" stroke-width="1.4" stroke-linejoin="round"></g>
+        <g class="steam" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" transform="translate(804 404)">
+          <path d="M16 -10 q-8 -12 0 -24 t0 -24"/><path d="M29 -12 q-8 -12 0 -24 t0 -24"/><path d="M42 -10 q-8 -12 0 -24 t0 -24"/>
+        </g>
+        <circle class="led" cx="190" cy="372" r="3" fill="#1FA37B"/>
+      </svg>
+      <div class="screen" aria-hidden="true">
+        <p class="l1">Stories from</p>
+        <p class="l2"><span id="typed"></span><span class="cursor"></span></p>
+        <div class="bars"><i style="width:92%"></i><i style="width:84%"></i><i style="width:88%"></i><i style="width:60%"></i></div>
+      </div>
+      <div class="status" aria-hidden="true"><span>story.doc</span><span id="wc">Words: 0</span></div>
+      <p class="sr">Stories from Waterbury, Meriden, Hartford and towns all over Connecticut.</p>
+    </div>
+  </section>
+
+  <div class="box title-box">
+    <h1>Sean Krofssik, reporter at the Hartford Courant</h1>
+    <p>Covering Connecticut since 2004. Sports first, news now.</p>
+  </div>
+
+  <!-- ARTICLES -->
+  <section class="box" id="articles" aria-labelledby="art-h">
+    <h2 id="art-h">Articles</h2>
+    <p class="lead">I cover breaking news, courts, public safety and local business for the Hartford Courant. Before that I spent 19 years writing sports for the Record-Journal in Meriden.</p>
+    <div class="tabs" role="tablist" aria-label="Article sections" id="artTabs"><span class="ind" id="artInd"></span></div>
+    <div id="artPanel" role="tabpanel" class="panel"></div>
+    <button class="more" id="more" type="button">Show all</button>
+  </section>
+
+  <!-- CAREER -->
+  <section class="box" id="career" aria-labelledby="car-h">
+    <h2 id="car-h">Where I&rsquo;ve worked</h2>
+    <div class="tabs" role="tablist" aria-label="Career" id="carTabs"><span class="ind" id="carInd"></span></div>
+    <div id="carPanel" role="tabpanel" class="panel"></div>
+  </section>
+
+  <!-- QUOTES -->
+  <section class="box" id="quotes" aria-labelledby="q-h">
+    <h2 id="q-h">From my stories</h2>
+    <p class="lead" style="margin-bottom:18px">Things people told me, pulled from the headlines.</p>
+    <div class="quotes" id="qwrap" aria-live="polite"></div>
+    <div class="dots" id="qdots" role="group" aria-label="Choose a quote"></div>
+    <div class="progress"><i id="prog"></i></div>
+  </section>
+
+  <!-- BIO -->
+  <section class="box" id="bio" aria-labelledby="bio-h">
+    <h2 id="bio-h">Sean Krofssik</h2>
+    <div class="bio" id="bioBox">
+      <p>I&rsquo;m a staff reporter at the Hartford Courant. I live in the Waterbury area and I have a journalism degree from Southern Connecticut State University.</p>
+      <div class="rest"><div>
+        <p>I got my start in 2004 writing sports for The Southington Citizen. That same year I joined the sports staff at the Record-Journal in Meriden, and I stayed there for 19 years, covering high school and community sports in Meriden, Wallingford, Southington and Cheshire.</p>
+        <p>In 2014 the Connecticut chapter of the Society of Professional Journalists gave me first place in sports news. I was also a studio guest on CPTV&rsquo;s <i>GameTime</i> in 2016.</p>
+        <p>In 2024 I started freelancing for the Hartford Courant and later joined the staff. Now I cover breaking news, courts and public safety, along with a lot of stories about local businesses and the people who run them. Some of my stories also run on Yahoo News and MSN.</p>
+      </div></div>
+      <p style="text-align:center;margin-top:8px"><button class="link-btn" id="bioBtn" type="button" aria-expanded="false">Full bio &rarr;</button></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="box contact" id="contact" aria-labelledby="c-h">
+    <h2 id="c-h">Contact me</h2>
+    <p>Have a story idea or a tip? The easiest way to reach me is on X. You can also find more of my work on Muck Rack.</p>
+    <div class="btnrow"><a class="btn" href="https://x.com/SKrofssik" target="_blank" rel="noopener noreferrer">@SKrofssik on X</a><a class="btn alt" href="https://muckrack.com/sean-krofssik" target="_blank" rel="noopener noreferrer">Muck Rack</a></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <a class="brand" href="#home"><b>Sean Krofssik</b><span>Reporter, Hartford Courant</span></a>
+    <nav aria-label="Footer"><a href="#articles">Articles</a><a href="#career">Career</a><a href="#quotes">Quotes</a><a href="#bio">Bio</a><a href="#contact">Contact</a></nav>
+    <div>&copy; Sean Krofssik. Articles &copy; their publishers.</div>
+  </div>
+</footer>
+
+<script>
+const G = id => "https://news.google.com/rss/articles/" + id + "?oc=5";
+const COURANT = "Hartford Courant";
+const S = {com:"Community", biz:"Business", safety:"Justice & Safety", health:"Health", sports:"Sports"};
+const clips = [
+  {"s": "safety", "d": "2026-10-05", "t": "UConn assistant coach facing multiple charges in connection with Tolland crash", "u": "https://www.courant.com/2026/10/05/uconn-assistant-coach-facing-multiple-charges-in-connection-with-tolland-crash/"},
+  {"s": "com", "d": "2026-10-05", "t": "Popular CT daycare that’s operated for 40 years says it’s forced to close. Parents decided to try to save it.", "u": "https://www.courant.com/2026/10/05/popular-ct-daycare-thats-bleeding-money-says-its-forced-to-close-why-parents-decided-to-try-to-save-it/"},
+  {"s": "health", "d": "2026-09-22", "t": "People are using social media trends to get a good night’s sleep. CT doctors say it can cause harm.", "u": "https://www.courant.com/2026/09/22/people-are-using-social-media-trends-to-get-a-good-nights-sleep-ct-doctors-it-can-cause-more-harm/"},
+  {"s": "com", "d": "2026-09-21", "t": "Yearly CT event that drew 18,000 people to end. Regular attendees lament loss of a ‘favorite’", "u": "https://www.courant.com/2026/09/21/yearly-ct-event-that-drew-18000-people-to-end-regular-attendees-lament-loss-of-a-favorite/"},
+  {"s": "safety", "d": "2026-09-21", "t": "CT wrong way driving system has stopped 1,000+ possible tragedies. It’s drawn national attention as life saving.", "u": "https://www.courant.com/2026/09/21/ctdots-wrong-way-driving-program-is-leading-the-way-in-preventing-tragedies-its-saving-lives/"},
+  {"s": "com", "d": "2026-09-18", "t": "They’re part of the family of man known as America’s first spy. Why they will gather in CT 250 years later.", "u": "https://www.courant.com/2026/09/18/theyre-part-of-the-family-of-man-known-as-americas-first-spy-why-they-will-gather-in-ct-250-years-later/"},
+  {"s": "com", "d": "2026-09-17", "t": "CT-based nonprofit has impacted more than 1,500 lives. How they do it.", "u": "https://www.courant.com/2026/09/17/ct-based-nonprofit-has-impacted-more-than-1500-lives-how-they-do-it/"},
+  {"s": "safety", "d": "2026-09-14", "t": "‘Rain bomb’ led to flash flooding in shoreline towns in CT. Some got more than 7 inches", "u": "https://www.courant.com/2026/09/14/rain-bomb-led-to-flash-flooding-in-shoreline-towns-in-ct-some-got-more-than-7-inches/"},
+  {"s": "com", "d": "2026-09-14", "t": "New CT food pantry to serve ‘overlooked’ community. It offers ‘communication accessible’ environment", "u": "https://www.courant.com/2026/09/14/new-ct-food-pantry-to-serve-overlooked-community-it-offers-communication-accessible-environment/"},
+  {"s": "safety", "d": "2026-09-13", "t": "Flash flooding traps motorists, brings road closures in parts of CT. In one town 13 rescues took place", "u": "https://www.courant.com/2026/09/13/flash-flooding-causes-road-closures-in-parts-of-ct-warnings-remain-until-just-after-noon/"},
+  {"s": "com", "d": "2026-09-11", "t": "Historic CT-based ship among two vessels on new stamp honoring U.S. Coast Guard. ‘Our nation commemorates’", "u": "https://www.courant.com/2026/09/11/historic-ct-based-ship-among-two-vessels-on-new-stamp-honoring-u-s-coast-guard-our-nation-commemorates/"},
+  {"s": "health", "d": "2026-09-10", "t": "Mother’s journey to save 2-year-old son brought her to five states. Why it turned into a stay in CT.", "u": "https://www.courant.com/2026/09/10/mothers-journey-to-save-2-year-old-son-has-brought-her-to-five-states-and-a-temporary-stay-in-ct/"},
+  {"s": "biz", "d": "2026-09-08", "t": "Tipping in nontraditional places becoming ‘annoyance’ for consumers, CT experts say. ‘Huge culture shift’", "u": "https://www.courant.com/2026/09/08/tipping-in-nontraditional-places-becoming-annoyance-for-consumers-ct-experts-say/"},
+  {"s": "biz", "d": "2026-09-07", "t": "CT lawmaker seeks moratorium on new data centers in state. He wants people and the environment protected.", "u": "https://www.courant.com/2026/09/07/ct-lawmaker-seeks-moratorium-on-new-data-centers-in-state-he-wants-people-and-the-environment-protected/"},
+  {"s": "safety", "d": "2026-09-06", "t": "Suspect bites CT police dog after attempting to flee police following stop", "u": "https://www.courant.com/2026/09/06/suspect-bites-ct-police-dog-after-attempting-to-flee-police-following-stop/"},
+  {"s": "com", "d": "2026-09-04", "t": "CT woman’s relative barely escaped deadly flooding in Nepal. She is helping family rebuild in ‘dire situation’", "u": "https://www.courant.com/2026/09/04/ct-woman-is-raising-money-to-help-her-family-rebuild-in-nepal-following-devastating-flooding/"},
+  {"s": "biz", "d": "2026-09-03", "t": "Popular restaurant famous for its hot oil pies is expanding in CT. Here’s where it’s coming next", "u": "https://www.courant.com/2026/09/03/popular-restaurant-famous-for-its-hot-oil-pies-is-expanding-in-ct-heres-where-its-coming-next/"},
+  {"s": "com", "d": "2026-09-01", "t": "A CT 20-year-old is training to be tops in world in his skill. He’s heading to China to prove it.", "u": "https://www.courant.com/2026/09/01/a-ct-20-year-olds-training-to-be-tops-in-world-in-his-skill-hes-heading-to-china-to-prove-it/"},
+  {"s": "safety", "d": "2026-08-31", "t": "Long-term lane closures slated for busy CT highway as part of a larger project", "u": "https://www.courant.com/2026/08/31/long-term-lane-closures-slated-for-busy-ct-highway-as-part-of-a-larger-project/"},
+  {"s": "com", "d": "2026-08-28", "t": "A CT one-room schoolhouse dates to 1865. Now glowing with renovations, it unveils a true American story.", "u": "https://www.courant.com/2026/08/28/a-ct-one-room-schoolhouse-dates-to-1865-now-glowing-with-renovations-it-unveils-a-true-american-story/"},
+  {"s": "safety", "d": "2026-08-27", "t": "Major CT highway traffic pattern shift taking place this week. It’s scheduled to be in place for two years.", "u": "https://www.courant.com/2026/08/27/major-ct-highway-traffic-pattern-shift-taking-place-this-week-its-scheduled-to-be-in-place-for-two-years/"},
+  {"s": "com", "d": "2026-08-26", "t": "A historic CT ferry crossing is getting an $8M upgrade. What the funding will provide", "u": "https://www.courant.com/2026/08/26/a-historic-ct-ferry-crossing-is-getting-an-8m-upgrade-heres-what-to-the-funding-will-provide/"},
+  {"s": "com", "d": "2026-08-25", "t": "CT marching band receives grant they call ‘huge.’ It came as school budgets tighten for arts programs", "u": "https://www.courant.com/2026/08/25/ct-marching-band-receives-75k-for-new-instruments-as-school-budgets-tighten-for-arts-programs/"},
+  {"s": "biz", "d": "2026-08-23", "t": "CT ‘plant guy’ finds a new home for his growing business. It offers fun and games and an education", "u": "https://www.courant.com/2026/08/23/ct-plant-guy-finds-a-new-home-for-his-growing-business-it-offers-fun-and-games-and-an-education/"},
+  {"s": "safety", "d": "2026-08-22", "t": "CT man arrested on DUI charges after state police receive alert of wrong-way driver on I-84", "u": "https://www.courant.com/2026/08/22/ct-man-facing-dui-charges-after-state-police-receive-alert-of-wrong-way-driver-on-i-84/"},
+  {"s": "com", "d": "2026-08-18", "t": "He grew up in CT then headed to Hollywood. His first feature ‘thriller’ film is out and soon to hit streaming.", "u": "https://www.courant.com/2026/08/18/he-grew-up-in-ct-then-headed-to-hollywood-his-first-feature-thriller-film-is-out-and-soon-to-hit-streaming/"},
+  {s:"safety",d:"2026-09-26",t:"CT-owned intersections are getting video detection upgrades. What that means for drivers",u:"https://www.yahoo.com/news/us/articles/ct-owned-intersections-getting-video-093000358.html",o:"Hartford Courant via Yahoo"},
+  {s:"com",d:"2026-09-24",t:"CT winery is bringing back a fall tradition. It includes a ‘legendary’ competition that gets very messy.",u:"https://www.yahoo.com/lifestyle/articles/ct-winery-bringing-back-fall-093000964.html",o:"Hartford Courant via Yahoo"},
+  {s:"safety",d:"2026-09-23",t:"Road safety improvements are raising concerns in one CT town. The mayor opposes the plan.",u:"https://www.yahoo.com/news/articles/road-safety-improvements-raising-concerns-090000610.html",o:"Hartford Courant via Yahoo"},
+  {s:"com",d:"2026-07-27",t:"A CT sports team has created a family for fans. Its stadium has become an anchor for fun.",u:G("CBMiywFBVV95cUxQUHVicUxzVVNVS3FHVVdXblJjUENLRXRkSXNBWlFwd2tzLW5OSnVhYnEwWXpUOTlFQVppRWUyXzRNdmx5NTZzZTlqNVAyazZ2YU5ocU5hVXktdVRwMkRtMmJ4dVg1YkQtRTkwdG5uZlRlcWdlTjZ3NzVIWWpVUjI0Z0YxaDlXN3RFMVRlUDV1NTVXSmttandXUkxTNXJmYnFQRkdIZE5KVHNKUE1xQ2xTeXFzcXo5a0ZrOVl2S012MFFWSjlFdGdsZktJNA")},
+  {s:"com",d:"2026-06-01",t:"CT LGBTQ+ center to reopen following financial troubles. Just in time to celebrate start of Pride Month",u:G("CBMi0AFBVV95cUxNVDZaOXVhYVBhNXh2VEdnYWZ2NTdGVkVwVW1seVQ2VlNibU5UdWNtbTJtVHJURDliZk9XWERWcnE2TlR5ckZWX0l1d0hJb01LemxaLXl4enE5ckRkMlVkS2dubUt6V25mQlc4ODlVVkExcGc2dGxWMGtZejk1MWR0LVc3Y2MxTno0RTl0a05yX2g1SWlyV0RkUG5KaWgyWEhIV0J2MGtPWGFsLTl6bHhSdmw5RDBTVHVWQnc0UGJLMmtvVGtXYWgxRTg3ZFY0V1RO")},
+  {s:"com",d:"2026-06-24",t:"Remains of soldier missing since WWII finally brought home to CT. ‘He was loved and missed’",u:G("CBMiywFBVV95cUxQdnpFdEU2c2J2TXNTTXM5WEYwVHdxR3Atbi15STdNQnltOExBWWZtNDI4RmVRUFFMS3pjZmQ1QkhqdHd2RllOSVdlM3h1emZkUGxWUFgzMGpVRFJqb2I5MHVmaUFLMTdRTlFmVXVUdjZhdng4bXJvTWFEQ09OV3VGNVh3eTlFRXJVczl4TE43cUZYWW5FMXdQSnhfUnhiNnZSanhJcXF4SUc2OGxLTUc1U2YwUWFlUFpqSjNISjVnYTNNcjZ1YTNiRVU3dw")},
+  {s:"health",d:"2026-04-05",t:"Former NHL player opens CT branch of rehabilitation, training center. ‘It’s helped thousands’",u:G("CBMiwgFBVV95cUxPREJrU1FaWjFNd1JrdU1ZVFlDSTB1RVBwQ3lxaGhNNXhYOGpjOFZSYkloblk1MnNfRnJreVZoeEY4U0xVbFdvN1pRcjZFekVveGwxTjl3Y2RhOUdXenJnM281ZVpwZlVoaV9aZzBEbGdhQ1VVRURJZ3hNcEJwSE9PVHpTaV8yMDdoX0VjeklLLVQ5OHFtNGkwVGNZa1FfTDFlWFBVbVBzeHp1VWJDMnRLdV9EazJWNzdqdFAzd0RMYkJQZw")},
+  {s:"biz",d:"2026-03-31",t:"How this CT boutique became go-to place for prom season. Over 10,000 gowns are sold each year",u:G("CBMixgFBVV95cUxNTGZibnhvcmlJZTVLelBZQ0lCZzBUSlRzZXdZVkdiWGZ4SEtQaFRUbTV4c0t1UWZ3bFpBY241eGREbWQtaFdTQ0RyX1VEQ2tsQjdwTXZvYzctM2NmdElEZGVWNnhsaGFNWGMxb1gxREp1d1hlR0JiT3VnMC1PODN5MWxFTG1HSDdZRlU4eHYxMUxZWHpnMWtDaEJ5TUhBYnVZUFhLTWZ5cTZxeE5lVVNRbklScmVLYmxkMGJYb2FvemY4U3drTFE")},
+  {s:"health",d:"2026-02-02",t:"A CT hospital treats ‘worst pain you can imagine.’ Why 1,200+ patients need it each year",u:G("CBMiygFBVV95cUxNVmZzMTk5NzVVWDV6a2lvSnRDMGZfYk9wOFpoR0JiWUt3X1E3M21Kb1gzUk9mYXYtZ3pDUFNCeXBiTmRyMUo5LTVWWkVraGZsQk9BXzVjN3RYS2FXYXRjWmc0MGdidVhMeThIc1NNdmhLN19IT3I5eG52b1B4U0ZtSV9ERml6UmhKWnBIX2NjQzlxQmRRRHlESVFkS3V2Y0pTMXRMdS1HZmtZclFjSmpGSkVBM3BvX0RxcGpSYXk5SGxKaU8zX3VzcXJB")},
+  {s:"safety",d:"2026-02-17",t:"CTDOT wants new laws aimed at distracted driving. ‘The law really hasn’t kept up with technology’",u:G("CBMizgFBVV95cUxQTTNoTmR0N29qV3JfV09uVXVuOXhjM3p3U1Rhc0NaR0EzRkhZdGdMZjh4cVlzLXY2ZlplcFU4d3VpWnZzbVc2VzdMQWJyWERVNVRCaUxkSjBnYTNRd2l5bGVIaVc2anY1eXg5Z0JET3dpcHZlQnFFWGJsMUF1Yk5OWElmQ1dCN3ZQSkFJUG55dGR4dGVheVQ3VDdrVlV1LUgtOEhPU0l4YU1yR1RfVmRONnJBaGZOamVVTXdaQjdGVDQxWTJqNVZBbjdYalRRQQ")},
+  {s:"safety",d:"2026-03-09",t:"Famed civil rights attorney joins family of man shot by Hartford police as they seek accountability",u:G("CBMi0AFBVV95cUxNc004SnFkWDRhRGZ3N0xRZDFrMzA0TEZXdGFyY3dGU3JSN2FRdTJSMFZxSXBYR3JDOFktRDc2YU5RTC03bS1Kb2Z3ODVORUItQTFlTlNMYVpaMTQtM2hrS2haZXF6WHZ2NFpiSzNETlRCT2ZBNGxZLUlRZHJhbDI1N2c2cjAwQ0ViTjluaWpuVlNmMDhNdHJHRzMyeDB2TDVpTWdHTV9feXZWS3pLTmNGX1BxUzVSX1lQS0xoWl9HRDRHYjE0VGMyRHFlSnhLTVZk")},
+  {s:"biz",d:"2026-08-19",t:"Growing home remodeling business moves into CT as more people look to renovate over relocate",u:G("CBMixwFBVV95cUxOZHRPNWJvdzZMVWR5Y2E1eXBfQ2l5M2YtUDQxQmNheXRKRC1zZ3Z3WlhhOGh6Z0h2Rm5YM2JxaGlFX3daQmlUSHBScGhRR0Ryd2xTc2JkUlkxZlk3d1pyYUtFSExwMU9zT0tFQ0lvT2k0ZDQyNHFXSUxJTm1PYTJjWWdNcUF5VWJjc2xoOE55aGpYVDlsR3dERzRUeEs4dUZGblRPSWtkbE1rZVY4YmthZW1YT3dhZGNPeF9iTUkxU0JJdzgyOTQw")},
+  {s:"biz",d:"2026-09-13",t:"CT mall is adding a new anchor geared toward families. It includes go-kart track and trampoline park",u:G("CBMi0AFBVV95cUxOTlN0R2ZVTGtTSDhpZ3BYYXE1YnMtTUNLSVMyX01fekF0RTlSNkhxeG9JVF96ajR2enFqYTgzc3RidldzVXFGdWhnc3VaeDk2cVlQTzBpWXJRQUdiWURyY3IxcUtyajRrQWl6NnhoZ0V0RzdBWG9rMmFwVkZnRXB1Nlo0cmhFc2hiNUpNZ01Vc2hjQW1LTU9sdGFObGU3TXFFd1ctdm1ncjA2MHJOa0VpeHRORC1hYnNxbjViM3haTnZsS3Z4c2hrSHJMbWxsdmUz")},
+  {s:"health",d:"2025-02-24",t:"Amid critical shortage of nurses in CT, colleges step in. Despite major strides, ‘we’re in a pickle’",u:G("CBMiwgFBVV95cUxPOXFkLWU1OWM3MjFsVkN3MHQxT3V4ZjN6UnMzVzk3cWhQNzBXV3FEZl9rN0FxcnNoQnY5N1NvYmxrS0V2TFFpUFpkSkozLXFmcVp1Z2JrdDFMcm1sWWNhZ1FJSkJDeURycE9URDNxaUlLUjBuUHJKdGUwQzhWeHg4Zml2UVhzSGNkQUdGdEtWY3JzVkJOUThJWUdlZ1A5cTdHcldBaVdmeEk1NWVDajRPeDl6bGF5YV8zbF9wMUllUVV6QQ")},
+  {s:"safety",d:"2026-06-01",t:"CT agency audit finds internal control deficiencies, instances of noncompliance with laws",u:G("CBMiwgFBVV95cUxNWlFwaEFxNVFpbWFHV05oQ0tBME9uSXZRSHJSU1d3TkZwUUpuZ3JJMktfMmZ2Qk9uSWxna3ZQSlp3MXM2UXpITk9mUTYydXVOX1RRak1XM3BoN1lKMXBubHBGQXNNOHlVX1VqejlhRUdqTTQwcUpkMXY4YzRhczJSMzI1Wld0cXFDVzFvd0N3enNhN3BzdGp4d1FQVXhvLXp3a1FJcU9MMTZueGRpQjE2UWEyTDBhX19paFpSRzdBcER3UQ")},
+  {s:"health",d:"2025-07-25",t:"CT’s largest domestic violence shelter undergoes significant renovation. Here’s why and how.",u:G("CBMizgFBVV95cUxPRm5DN3hzNTFrRFdWZGNNLXNPR3FpeTBxMnZOOVY4ZXllN3Z1Q1EwWW1yY3ZMSDRKWG5qWGJMQkhhRnpBTm9veHhzaGFmRHZkUWtDaFpOODZUQmFwZDM2bnJyTWRBMHVOMTdxem5paHlYaElmcVRwR05fd1dCWUJDQlk1QWlmRUtXOWhJSWVZV0h6WG8tVWVub2piSjlYUC00eEZ5eGh6VXA0cXVscjBFX3pZd0dxdHRrek9hSEx0NkV3MlJ1WE1XRXJuOXp4UQ")},
+  {s:"biz",d:"2026-08-09",t:"Off-price apparel and home fashion chain expansion into CT grows with three stores added",u:G("CBMixwFBVV95cUxOdTBkeFZRSnBWU3RVSnBRbXNKUzNjc3FYTjRITzNqbjUyTEo4eTBlc1RNejRFNzAxZ2FYMzRBQ2dFWVZhMUVZeVZtSjZQY0RJVzNYal9DWXh5OVE2bmxwWHE5MThOYlQyTWctX2JvNXNSYzNvVEs2dURvLU9BLWhYMTZ6ZWlSbEhnVU9oRW9yNzFzRlRwc3hVTUxubGtYVktRaXc4bjRWSGVoOTUzWkdYZ0JEeHBLWXBQeVFtRFIyLUt2ampaX3Zj")},
+  {s:"health",d:"2026-04-14",t:"A CT cancer researcher helped create an app while fighting the disease. It may have saved his life",u:G("CBMixgFBVV95cUxNcmFQUVlOSlRKd3NoeHZYaFRHbUJVYXR4OTJQQ0FMYzJnUV9YYlZXZEtvWjI2bmUzRUJUNzltVG1HZ3ltczktclVERHlwdmNEUmZSZ04xOUg4VUFxZ25wRVE0UTkxZF9UQVRCSzFMTUJpbFEzOEUzM2QzeWFGam5FLXlEcFlYeUJoTXd6ampuQ3h1ak1LSDdEdlhhQUJoOWx0ZGIxbzdwRlV3OE82MWpUeEE2by1IdTY3UnduQm9vcVoyUjMwRWc")},
+  {s:"safety",d:"2025-12-24",t:"‘A Christmas miracle.’ CT honor high school graduate welcomed home after six months in ICE detention",u:G("CBMizAFBVV95cUxOV0IxZzJaUE9lTGhBQjNXWDc4YkVMMDAwbllKYlJpR3hzdlJQcUJ3UnZBekRKMVQ0NjNxX3Vvd21pLWRZYlJGRkpGUkZsTGMyYzZzX0tPZE1HeGtES3R4anFPX3J0M012X2dRQ29VWU92U0pLYkNlVDVWbDcwNzVZUEdFRW5PdE5YcllTS0JtRzRHRDBSbXh5eXY5SVRCU01zajYyMl9wWjR5bE45WXFNYnZxbl9ReS16ZXJiMUV4M0ZQdnNZZnlfNXlCTFk")},
+  {s:"health",d:"2025-02-13",t:"There’s a misperception about teen dating violence in CT. ‘There is a disbelief that it can happen’",u:G("CBMixgFBVV95cUxNaXFoTXhoSnJjbk9DOXhZWkVhcldtOXRNb1NKUENqTTFYLW1EYzhRS21KSTRMR1BHWmRaVkhfbFpDMFpzb0Z3aFJydW1jUHF2MHhTZWJBaXgxZ21ldlVCbF9ndTlyLTRRby00elpsWlpUbGJvb2duWlZXSW16UTFOUkZwLV9DYXRQMmUtdy1sbnpxQXIwY19TaVJ0QkVYTlgtaTIyVnltRkVKaXB3azhYUEVCLVI4Y1ZCZ0hINUpwVmFaM0pZSkE")},
+  {s:"safety",d:"2025-12-05",t:"Domestic violence screening tool has helped CT officers save thousands of lives. ‘It’s a game-changer’",u:G("CBMizwFBVV95cUxOMWJab3ZTR1JDekNoTTJVT25qRm14YzJaM1NOTS1janhqYy1HZk1zbmVDMEQ1VjY1eHJSemxhTldqMGRuSmdPSVJDdndNS2d4dkYycEk3a3g0QVIyQ251aEI4V2dfRDhVblBGNzF5WWNhUmNrOER2aEVSVFhiV25XNFR6ZWRoWGlPTGRmcUY0TU55NHlRMmVqdmtRZWtQT2Q3Y2dLZEFwT09aNE1iLXI5eDZLOG1oWDd3aW1tQXhMdG45Q3VHaDNXWEdaZXBKQTQ")},
+  {s:"health",d:"2024-08-27",t:"CT survivors say overdose deaths have everlasting impact on families of people with substance abuse addictions",u:G("CBMixwFBVV95cUxOTlBEOEVTUWVkOEVzM3NKYVRLamhkRS1mTU10em9GRFRubDF5SHVKQjM0Z1ZDM01tQnFFRUcwVG9NNy1DYWJQcXRxUEZfdzNRLW9zZWJRQ1dPcXprVWpUaTAya1haSDQ1T0kyX1ZDTzM1bVJtamd0S1pHN2pDZ1JWb0FsczBpM2p2QXV3NjZ2RERQLWFrZ1NsbE9ac0hpS2pPdVh2WHVIMzg2MTRFUTgwZTFjOFpKYllCZjFfYmp2MzBwc2t2aFE0")},
+  {s:"biz",d:"2024-11-13",t:"New CT business takes aim at fun with gallery featuring rock ‘n’ roll, carnival themes…and slingshots",u:G("CBMiwAFBVV95cUxQTzkwaVB5MXpmUVc1UTFuakpfUzZ4dFNlWE4wazNYSnBjaVJ0LW1iWElDLWxBNjRrMFF2Rno0WXZhSjQxRENyckF1WUlHdktBcTVmM3NRbkU4MmwxNEpLcmVDWTM0TnAwUTFVNE8xakNNZkFWOUdKb3Nkdy00RGh0VHFYcmx2TFJiTXcyMmRFMVNmZ2NHSXVUallSWVJzaWNObmpCNVZXd1RiczFzN29Bb1psNFhIdzhiU09GcU1IdDM")},
+  {s:"biz",d:"2025-12-05",t:"CT diner with vast specialty menu closes its doors. Here’s why and what comes next.",u:G("CBMi0AFBVV95cUxOOUw3Z3RSeWEwaGNBLTRGcWhGdk9hMlh5aUNoOGllTDdmVThFMEprZTlWQmlSN0ZRdkJ6TjdWWE5tbGo1eEg5TllLb2R1NmkxMWg3cGtSYjVXT3pvMnJFN2IxczllTy1TQ3RuSEtNWXJJaTlSaEt2cHNobDBUSHozWlNzMmsxVHliaFpFZEZsLUtia2hYdUlGUDdINjBGT3RVQkxHSzl1cDZwM0NIejR5dW83Qk8yeGFIbmJPQW5ReW1oVTh0ZTVsX19UbzNNUVhS")},
+  {s:"biz",d:"2025-01-19",t:"As CT mall continues to see departures, local stores reap benefits. ‘Plazas have made a comeback.’",u:G("CBMisgFBVV95cUxOdERtWGVaYXlpUHE5ZFFtc3dTbDFhUDBSYkE2bWVMdmhJSVljM093eWticm5PaVlycnZtajltdEV4aXpKM3RueGpLeW4zWEpRSW9YWjUzb2VGVUN5bFRzOUVCOElWRzRYcHRNOEZQWUVUNGoxMnNQZkNIZUFfTVhsSVBucUFETllrVFVqUkh3UElhZW9lTGpfanBQU0NBOVZzUG1pT3VTMGxjSzRfeUJUMDln")},
+  {s:"safety",d:"2026-03-04",t:"Protestors angry over fatal Hartford police shootings. ‘Mental illness shouldn’t be death sentence’",u:G("CBMiywFBVV95cUxNWUlqYlEyVnFnM1NGM3dLaUl0d0ZuQjVfSHNKaFJyR09CRGVvb1VKcEhOd2NRbzhKWkl2eHhCbnIxOFdmd3Z2MEYyOVNGMHhqd1lyZ0gwTVV0bzVTLUJVdzJYTVBONnY4S3hTN0puTEppZ2c4al9oakNLd1N4YW5HbXBWRTd3cHBWSmw0ckZLZVZVQy1zTHA2Mmxqc19KbG9ER1NSdlJHc3ZMUVlybzFISF9SMFZ6bmtVZWViSjFlSUVTRndjRE1XQ214QQ")},
+  {s:"health",d:"2025-10-01",t:"Domestic violence survivor says CT shelter saved her life. ‘I don’t know what would’ve happened’",u:G("CBMixgFBVV95cUxNWm00dlJKRjJacWpfWUpMd3pweUcycEktSGF3VXE3MW9CbEltTEd3aWsyTXF4WGg0THVlenJTNjliNDNRQ0lZcm0xZG4zNGt2UWVXSUhTenFEd2dXaDhVdF9yaUVPTGJ5WXJza0YwS0p3NklsbnVadlM4MkpjSVVYR2VvT3NpVE9oMVg2ZU15T3RPOHdiV0t6ci1FZGhVQ0pHSTIzd2ItYk5CcVRSNTFwbEthTnZOUFMzTU92YW9seWpFZW1lUFE")},
+  {s:"com",d:"2024-12-30",t:"CT Hanukkah celebration provides light in time of darkness surrounding Israel–Hamas war",u:G("CBMiwAFBVV95cUxQUzBNa2IxMkhvdE1fRGVvQ2dFNkFMV0xES1FKdlJCM2dvRmcyVllXTmNLUE9nYnRYSmlrdmdvQlk3aUM1SFE5cHR5UVVCQ2w4T3Zod2Z3NjYzWXRhR3NCM29HMEdORFItd1c5eXRZakNlbnRDMjg2LWJGdThYYnJ5WnRUdHBUdGNSVlVNaURUVWRvby04dnF6MFlpZVZsUWFIUXBxS1JyRFh1OWI3c1RuOFdYOUNNb3Ftc01VS29qUkI")},
+  {s:"health",d:"2024-10-18",t:"Staff at CT mental health hospitals say they are in ‘immediate and serious danger’. Here’s why.",u:G("CBMiyAFBVV95cUxNcVZxcGxLdHBjaXB1Nk4zaWRpNHVucWtsRk8tR2s0UWZyREt1blhnUEtzNGxxZFI4aGgyWXAxdFN6YXJEcnFoa0wxSVEtQzBYZ05NZGh3cHUwblRjSkR2WjNvTlByY1lVNVI4SnVwdjFhM1NfV2dYUU1EQkFNY0tZSU1OVXRFakk4TmRDSkF6R0FKNXIxWU84VkM2VmVtTXIwemp6ZnVmWjkxWklfZ2pzVzMtXzVZNl9mNEgxdDRFNVhwREFta0NPUg")},
+  {s:"safety",d:"2025-05-22",t:"Planning on traveling in CT for Memorial Day? Officials have a few tips to keep your journey safe.",u:G("CBMizAFBVV95cUxPWTRHMHdjemxHMzJzVUZQVG16eV9wdHJaQmZVVjV2dXB4TXNEWHhuSzdYaElmdDFQNzFDck9oVG9QX3VTOGJUOVRFTFFtSlZ1QVVkb2hkV1Z6THBubDBxV0thSTFBNjlEektJeWdqdWNzM3B6Nm5yQy1WdlRsSzN2ell2VkRvUlZWelRtdTBsSy1hb3hMd05xRjU4RXZMYkZteHVtUGUzYmlITll1b181WkUzYlZhcVRwVloxdFNnOEt6Z3VCM0JBRk1VcUU")},
+  {s:"biz",d:"2024-10-07",t:"New Latin-fusion restaurant brings warmth of the Dominican Republic to CT",u:G("CBMikwFBVV95cUxOQU16bnRMVWVhRzJ0a2xCWVFRLWtubHBnb0c1eDVEdXc1V2NQeW00b2l6TzB1MFVlR3VzQmZzdndkcGhfUmR4emwyS2ZzVktZSUpXRDdFQ3ZmY2V5UzRTLU9BX3lSbG4tZWp0TFNCWW05OURSbW5hZGFtOXlOMFhwbTJUak5NZDJJZXNMMk5Na1NWN3c")},
+  {s:"biz",d:"2025-10-28",t:"CT couple opens up vintage store with hopes of creating a vibe ‘that brings people together’",u:G("CBMikAFBVV95cUxNRHJBeWpoaF9fakFmSTVVaFU4UDBhLUZabUtTLUYtczQzVjFSWUlIUzN2WGxLLTh5czNJZmRsTzlJX3E5NHNMblpzXzZ2VUE1NVFSUjRpNU5mVzMzVHgwWkc4cl9IUU10LTM0T254dHUwMmZTSVQwMjQ5OXVRTjdhaEZNdE51dGJWLVBWbEYtQnk")},
+  {s:"biz",d:"2024-12-26",t:"Shoppers in droves finding post-holiday deals in CT stores. Here’s why and how.",u:G("CBMiwwFBVV95cUxPcWhuRXZpVzVPZGNWbFg1eHRqbHcwXzVwTUpjbC1kOENkOTU5WW5fQU9feDVnUlN1Y041XzN4YzUzTmowR2t6dWk5R21CSV82RnNaLVJ3ek5VVHNjdlhUbGw4T1Myb1FmazgwYjEzaUN4bVdCaGlnSGFCRUlMWEh4U0NSZmYtNFU5cF9iWTFQeDExTDg2dmN2WXM1SXBPZXVKNWJfZHhWbjRQeU5QQjVxM2hTM1Q0Tk96VWdyNVpJYklSem8")},
+  {s:"safety",d:"2025-06-11",t:"CT high school’s joy in graduation dimmed by classmate taken by ICE. Town hopes to get him back.",u:G("CBMixwFBVV95cUxONlIwN2QyWmZNWGh2THRaUXlEOUpOc1VrQm03dlU1WU80TEZUaWk2UHZYNHBTWEdfNVRmUGxYamlyREgzZVhtS19NWUE1MlVMTm9vNUdrY3dfQmZJbzB2NXVTRnZ1eTk2eGNHYlpWNUN6ODkzS1dQRERhNk9Lekh1TGxFRkg5TUlmeFAyT0JOZHNOazNST0NWYkNEQ0Q0R0RfeUZXMmhXVnJydDVZdEdlbjdpaklUUGFzUzVQSHoxM1NWOGV4blBJ")},
+  {s:"biz",d:"2024-09-30",t:"New halal restaurant offers a taste of the Middle East in CT. No travel necessary.",u:G("CBMitgFBVV95cUxNemF3UTBMUFVNSUlydWJsQU5Jd3JWWndMVVpnMFV0Q0RZVmgxa2lYQWhLbU9qbzFhRG5NTTl6dmlNZlpYNURoQXFnekQwdXFfSkdMN1Q0b2YtQ2RKajNOZ1BWSDNDX2lpaXozbHlPR19uLWNHTURPTUNxYUw3bGI1QzY4bGNKMTFvVVVIOFhhYm5ONHZKWUdNdS1ZRHJCX3R0eHdWQ2lpV2tZeHBCTy05MW1qVl9Udw")},
+  {s:"health",d:"2024-10-17",t:"CT domestic violence survivor and record-breaking Mount Everest climber reaches new heights",u:G("CBMixgFBVV95cUxPMHBDOFByZ0ZUNF9LTEV5OGtfX0g2SEZiNExoYmxSY0wtcXZvYldCTF9EMm1JZDNLT3lzMVRBUjdaOUZmRkFMSkNjSkV5TmpyRGE4VnMwSlQ1T0ZHZnFPdDZVUUdPTGFYOFJxanlkcmt2dURkMXExalBmUFM5Y3gwbGdiUGlfZVoyUExWMFdsOEU5Ql84aXZhV3hmeW5HR0lVd0VpaXZZTXhBT3FBal9UT1JuLXZrMFZLUFp3bzZacW5MSlRWWXc")},
+  {s:"biz",d:"2025-03-13",t:"A bakery tradition is rekindled after 27 years in CT town. Pastries and cakes sell out most weeks.",u:G("CBMiygFBVV95cUxPYjNCX184Ulp3UUQtVGpXeVB1M2FiUVpWcWZudWJWc3VaTV9BOWFxUzQ4VlJxb203UTFaVTJkVWtMLTdkNDAxbjBYU0VZaGR0ckFfdUdpZ05ya1pmNWNVR1V4SVJVeFRjZ3FjREo4c0pNZWd0VUFSOVlqS1NDNmxuWHlDdnpTUGx6QXE1QkxqX29ZOHhfTFpyenBGRFkxbGxPYVV6Z1FiNFVmM25xeDBqRlhOWHRzckM5cUlLRk9URXdXT1ZzRlFOSGxn")},
+  {s:"biz",d:"2025-04-24",t:"A new family-friendly CT cafe is buzzing with activity. The theme is an ode to how the owners met.",u:G("CBMizAFBVV95cUxNRk9sN2pMbG9XWG8zb0VRYlpCYnBaY0d6eVNhUThIYUFJNE1kQUNMcF9NQ3pPeXpqUi1QeHBHQTRsVC1wZnVZQ2RUUk1NSkFpUVZ1VWdIbWtBNW54dU9NcWtuUkxsY2RaaDY5MW1hdERCV3k3RmJsUmQ1TjdndTBnOW55NGd5YlFBeXRvRzcxay03ZjlsWi1KOVp6Q2c4cDBDRXpiV1BWZGJSSnVSTTk0aU5XeHdmQjRidE5XQ0lOVkloUUhOV3ZjVmh1UzQ")},
+  {s:"biz",d:"2025-08-20",t:"Family-owned CT hardware store changes hands after 100 years. New owner looks to last another 100.",u:G("CBMizAFBVV95cUxQdDVJVVlrbE1nY2NLMGV2SG43Q29NU3Vjc1o1aDFUVE40dG1IWDBxc3VBckljOTlnemlXNkw3a3VZWFQ0WGE5NnJNcGNtMkVXQUF1bXBaMWVnMEN1dnRzdFA1djN3V0J4dFZ0MGlFWXdmWmZzdUdWTnhJVFJnaUdDN3NSYU5yLU1XT0UyX1VWeEVFaEp4VWU3cGZjTmQwbXNaNV9FaWNIN2pGbTRNaXo1S3NkS2lGM0pYak9GLXZ6eUdheHVvQUZPWlFwV2o")},
+  {s:"biz",d:"2025-01-17",t:"CT couple brings taste of their homeland to new restaurant. ‘Trying to make a melting pot of food.’",u:G("CBMixAFBVV95cUxOZk1kWWJXTndrVV9RM2g1OEd4QTUxcmMzeHA1Z21NWG9PQkE4NmluY0RENXhtTENVLXZCR0VnNlVUTllSTHlFWDdjZzRiV0VBVzhMMTZZLWlZcFo4eDl5bzlCMDFRUTUtNHBqaG9fR2ZnOGROU0QxZlBnZWVUWE9lTTg0S2dFcW4tZ2RFbm5lQl9tR0dYQkh1VWlQTDFBcDdpbzlZMy1UVENaSVpXTjJZWW1kaTJ3cTgtek1RSVV2S3VUaC1k")},
+  {s:"biz",d:"2025-04-02",t:"Family-owned CT hardware store for sale after 100 years. ‘It’s home,’ longtime customers say",u:G("CBMiwAFBVV95cUxNcE1CTU9zZEJOYXp6UXhPQk5OT2JmWFVlaUdvRVRhVEs5SjZwdFR1WHZkZ3pfeVpDbDRFLUFvZWFWS241ZjJyblgzb2Z5TEMySWhyMVFSeVZxY2puR01uUzdtNVNYNUFTenppNF8yaXBUalVDSml1RmlNOWNJNlVHTG10RVlHYWQxTlRyLWxlQVpKOVFZX0VyNDlVV19NbTY1MHlrWGlmTW1jSnhOc2dseFlMNWxQYmRvLWxybVRBWXI")},
+  {s:"biz",d:"2025-04-18",t:"Longtime specialty market closing after decades in CT. ‘This wasn’t an easy decision,’ owners say.",u:G("CBMixwFBVV95cUxQeXpoRjlBRUhNVU5TaFZuT1JHT1dZZngwZXNOeTgxZ2kxTjJTVXVnNW5vMk5LRkNJb1c1b0Q2b0hUSTNCY2pIM0M3QndrLVFvQjVjcnN1V2xEdVVualVxWllLQWc4OURXM1d4c2JhSGpna3pKV2swUGN1RkFTRURESzA1TFNTaVY5emlIM0Z2NVF1a2IzeHFNWTFqdVJUUVFTdEFIVU9XRDdPVXp1SjI2RVJZcndILWM5ZTVsZm5CZjR4TW54SU1R")},
+  {s:"sports",d:"2022-06-19",t:"SUNDAY SHOWCASE: ‘Still batting, Team Alena Strong!’ Softball, Gaylord Gauntlet fuel recovery for Wallingford teen",u:"https://www.gaylord.org/patients-families/about/news/news-list/sunday-showcase-still-batting-team-alena-strong-softball-gaylord-gauntlet-fuel-recovery-for-wallingford-teen",o:"Record-Journal"},
+  {s:"sports",d:"2021-04-13",t:"ADAPTIVE SPORTS: Gaylord looks to add pickleball to its repertoire",u:"https://www.gaylord.org/patients-families/about/news/news-list/adaptive-sports-gaylord-looks-to-add-pickleball-to-its-repertoire",o:"Record-Journal"}
+].sort((a,b)=>b.d.localeCompare(a.d));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => { try { const x = new URL(u); return x.protocol === "https:" ? esc(x.href) : "#"; } catch(e){ return "#"; } };
+const fmt = d => new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});
+const byT = t => clips.find(c => c.t.includes(t));
+const outlet = c => c.o && !c.o.includes("Yahoo") ? c.o : COURANT;
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* mobile menu */
+const burger=document.getElementById("burger"), menu=document.getElementById("menu");
+burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+menu.addEventListener("click",e=>{if(e.target.tagName==="A"){menu.classList.remove("open");burger.setAttribute("aria-expanded",false)}});
+
+/* ---------- Laptop keyboard ---------- */
+const keyEls = {};
+(function(){
+  const rows = [ "1234567890-=", "QWERTYUIOP[]", "ASDFGHJKL;'", "ZXCVBNM,./" ];
+  const top=376, rowH=13, gap=3;
+  const L = y => 170 - (y-366)*(76/106) + 22;   // left edge of the base at height y, plus padding
+  const R = y => 730 + (y-366)*(76/106) - 22;
+  let svg = "";
+  rows.forEach((r,i) => {
+    const y = top + i*(rowH+gap);
+    const indent = [0,10,18,30][i];
+    const x0 = L(y)+indent+26, x1 = R(y)-26;
+    const w = (x1-x0)/r.length;
+    [...r].forEach((ch,j) => {
+      const id = "k"+ch.charCodeAt(0);
+      svg += `<rect class="key" id="${id}" x="${(x0+j*w+1.5).toFixed(1)}" y="${y}" width="${(w-3).toFixed(1)}" height="${rowH}" rx="2.5" fill="#fff"/>`;
+    });
+    svg += `<rect class="key" x="${(L(y)+4).toFixed(1)}" y="${y}" width="${(indent+18).toFixed(1)}" height="${rowH}" rx="2.5" fill="#fff"/>`;
+    svg += `<rect class="key" x="${(x1+4).toFixed(1)}" y="${y}" width="${(R(y)+18-x1-4).toFixed(1)}" height="${rowH}" rx="2.5" fill="#fff"/>`;
+  });
+  const y = top + 4*(rowH+gap);
+  svg += `<rect class="key" id="k32" x="340" y="${y}" width="220" height="${rowH-2}" rx="2.5" fill="#fff"/>`;
+  document.getElementById("keys").innerHTML = svg;
+  document.querySelectorAll("#keys .key[id]").forEach(k => keyEls[k.id] = k);
+})();
+function press(ch){
+  const k = keyEls["k"+ch.toUpperCase().charCodeAt(0)]; if(!k) return;
+  k.classList.add("hit"); setTimeout(()=>k.classList.remove("hit"), 110);
+}
+
+/* ---------- Typing on the laptop screen ---------- */
+(function(){
+  const words = ["Waterbury","Meriden","Hartford","Wallingford","the courthouse","the ballfield","Main Street","all over Connecticut"];
+  const el = document.getElementById("typed"), wc = document.getElementById("wc");
+  let wi = 0, count = 0;
+  if (reduce){ el.textContent = "all over Connecticut"; wc.textContent = "Words: 4"; return; }
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  let onscreen = true;
+  new IntersectionObserver(([e]) => { onscreen = e.isIntersecting; }).observe(document.querySelector(".stage"));
+  const ready = async () => { while (!onscreen || document.hidden) await wait(400); };
+  (async function loop(){
+    while(true){
+      const w = words[wi % words.length];
+      for (const ch of w){ await ready(); el.textContent += ch; press(ch); if(ch===" ") count++; wc.textContent = "Words: " + (count + 2 + (el.textContent.trim()?1:0)); await wait(70 + Math.random()*90); }
+      count++;
+      await wait(1500);
+      while (el.textContent.length){ el.textContent = el.textContent.slice(0,-1); await wait(35); }
+      await wait(350);
+      wi++;
+    }
+  })();
+})();
+
+/* ---------- Tabs helper ---------- */
+function makeTabs(bar, ind, items, onSelect){
+  items.forEach((it,i) => {
+    const b = document.createElement("button");
+    b.className="tab"; b.type="button"; b.setAttribute("role","tab"); b.id = bar.id+"-"+i;
+    b.innerHTML = it.label; b.setAttribute("aria-selected", i===0);
+    b.tabIndex = i===0 ? 0 : -1;
+    b.addEventListener("click", () => select(i));
+    bar.insertBefore(b, ind);
+  });
+  const tabs = [...bar.querySelectorAll(".tab")];
+  function move(t){ ind.style.transform = `translateX(${t.offsetLeft}px) scaleX(${t.offsetWidth/100})`; }
+  function select(i, focus){
+    tabs.forEach((t,j)=>{ t.setAttribute("aria-selected", j===i); t.tabIndex = j===i?0:-1; });
+    move(tabs[i]); if(focus) tabs[i].focus();
+    const t=tabs[i]; if (t.offsetLeft < bar.scrollLeft || t.offsetLeft+t.offsetWidth > bar.scrollLeft+bar.clientWidth) bar.scrollTo({left:t.offsetLeft-16, behavior: reduce?"auto":"smooth"});
+    onSelect(items[i], i);
+  }
+  bar.addEventListener("keydown", e => {
+    const i = tabs.findIndex(t=>t.getAttribute("aria-selected")==="true");
+    if (e.key==="ArrowRight"){ e.preventDefault(); select((i+1)%tabs.length, true); }
+    if (e.key==="ArrowLeft"){ e.preventDefault(); select((i-1+tabs.length)%tabs.length, true); }
+  });
+  addEventListener("resize", () => move(tabs.find(t=>t.getAttribute("aria-selected")==="true")));
+  requestAnimationFrame(()=>select(0));
+  if (document.fonts) document.fonts.ready.then(()=>move(tabs.find(t=>t.getAttribute("aria-selected")==="true")));
+  return select;
+}
+function replay(el){ el.classList.remove("panel"); void el.offsetWidth; el.classList.add("panel"); }
+
+/* ---------- Articles tabs ---------- */
+let refreshArticles = () => {};
+(function(){
+  const panel = document.getElementById("artPanel"), more = document.getElementById("more");
+  const cats = [{k:"latest",label:"Latest"}, ...Object.entries(S).map(([k,v])=>({k,label:v}))];
+  const count = k => k==="latest" ? clips.length : clips.filter(x=>x.s===k).length;
+  const base = cats.map(c => c.label);
+  cats.forEach(c => { c.label += `<span class="n">${count(c.k)}</span>`; });
+  let cur = cats[0], all = false;
+  function list(){ return cur.k==="latest" ? clips : clips.filter(x=>x.s===cur.k); }
+  function draw(){
+    const rows = list(), show = all ? rows : rows.slice(0,6);
+    panel.innerHTML = `<div class="cards">${show.map((c,i)=>`
+      <a class="card" href="${safeUrl(c.u)}" target="_blank" rel="noopener noreferrer" style="animation-delay:${Math.min(i,12)*45}ms">
+        <span class="out">${outlet(c)}</span><h3>${esc(c.t)}</h3><time datetime="${c.d}">${fmt(c.d)}</time><span class="go">Read on <span aria-hidden="true">&rarr;</span></span>
+      </a>`).join("")}</div>`;
+    more.hidden = rows.length <= 6;
+    more.textContent = all ? "Show fewer" : `Show all ${rows.length}`;
+    replay(panel);
+  }
+  makeTabs(document.getElementById("artTabs"), document.getElementById("artInd"), cats, c => { cur = c; all = false; draw(); });
+  refreshArticles = () => {
+    document.querySelectorAll("#artTabs .tab").forEach((b,i) => { b.innerHTML = base[i] + `<span class="n">${count(cats[i].k)}</span>`; });
+    draw();
+  };
+  more.onclick = () => { all = !all; draw(); if(!all) document.getElementById("articles").scrollIntoView({behavior: reduce?"auto":"smooth"}); };
+})();
+
+
+/* ---------- Auto-update: add new stories from stories.json ----------
+   stories.json sits next to this page and is refreshed on the server by
+   update-stories.php (cron job). If it is missing or broken, the page
+   simply keeps the stories built into it. */
+(async function(){
+  try {
+    const r = await fetch("stories.json", {cache: "no-cache", credentials: "omit"});
+    if (!r.ok) return;
+    const data = await r.json();
+    if (!data || !Array.isArray(data.stories)) return;
+    const key = t => String(t).toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 40);
+    const haveU = new Set(clips.map(c => c.u)), haveT = new Set(clips.map(c => key(c.t)));
+    let added = 0;
+    for (const s of data.stories.slice(0, 1000)) {
+      if (!s || typeof s.t !== "string" || typeof s.u !== "string" || typeof s.d !== "string") continue;
+      if (!/^https:\/\/www\.courant\.com\/\d{4}\/\d{2}\/\d{2}\//.test(s.u) || !/^\d{4}-\d{2}-\d{2}$/.test(s.d)) continue;
+      if (haveU.has(s.u) || haveT.has(key(s.t))) continue;
+      clips.push({ s: S[s.s] ? s.s : "com", d: s.d, t: s.t.slice(0, 240), u: s.u });
+      haveU.add(s.u); haveT.add(key(s.t)); added++;
+    }
+    if (added) { clips.sort((a, b) => b.d.localeCompare(a.d)); refreshArticles(); }
+  } catch (e) { /* keep built-in stories */ }
+})();
+
+/* ---------- Career tabs ---------- */
+(function(){
+  const items = [
+    {label:"Hartford Courant", yrs:"2024&ndash;now", role:"Staff Reporter", place:"Hartford Courant", body:`<p>I started freelancing for the Courant in 2024 and later joined the staff. I cover breaking news, courts and public safety, plus a lot of stories about local businesses, shelters, hospitals and neighborhoods.</p><p>Some of my stories also run on Yahoo News, MSN and other sites.</p>`},
+    {label:"Record-Journal", yrs:"2004&ndash;2023", role:"Sports Reporter", place:"Record-Journal, Meriden", body:`<p>I spent 19 years on the sports desk, covering high school and community sports in Meriden, Wallingford, Southington and Cheshire. I also wrote the Sunday Showcase features.</p><ul><li><a href="https://www.gaylord.org/patients-families/about/news/news-list/sunday-showcase-still-batting-team-alena-strong-softball-gaylord-gauntlet-fuel-recovery-for-wallingford-teen" target="_blank" rel="noopener noreferrer">&lsquo;Still batting, Team Alena Strong!&rsquo;</a> (2022)</li><li><a href="https://www.gaylord.org/patients-families/about/news/news-list/adaptive-sports-gaylord-looks-to-add-pickleball-to-its-repertoire" target="_blank" rel="noopener noreferrer">Gaylord looks to add pickleball to its repertoire</a> (2021)</li></ul>`},
+    {label:"Southington Citizen", yrs:"2004&ndash;2007", role:"Sports Writer", place:"The Southington Citizen", body:`<p>This is where I started. I covered Southington sports for the weekly paper for about three years, while also working at the Record-Journal.</p>`},
+    {label:"Awards & TV", yrs:"2013 &middot; 2016", role:"Honors", place:"", body:`<ul><li>First place, Sports News (newspapers 18,000&ndash;40,000 circulation), Connecticut SPJ Excellence in Journalism Awards for 2013, for &ldquo;Tempest in a Tech school teapot?&rdquo;</li><li>Studio guest on CPTV Sports <i>GameTime</i> with Joe Zone, June 2016. <a href="https://www.pbs.org/video/gametime-game-time-434/" target="_blank" rel="noopener noreferrer">Watch</a></li><li>Voter in the statewide high school basketball polls.</li></ul>`},
+    {label:"Education", yrs:"B.A.", role:"Journalism", place:"Southern Connecticut State University", body:`<p>I studied journalism at Southern Connecticut State University in New Haven.</p>`}
+  ];
+  const panel = document.getElementById("carPanel");
+  makeTabs(document.getElementById("carTabs"), document.getElementById("carInd"), items, it => {
+    panel.innerHTML = `<div class="career"><div><p class="yrs">${it.yrs}</p><p class="role">${it.role}</p>${it.place?`<p class="place">${it.place}</p>`:""}</div><div>${it.body}</div></div>`;
+    replay(panel);
+  });
+})();
+
+/* ---------- Quote carousel ---------- */
+(function(){
+  const Q = [
+    {q:"It&rsquo;s home.", who:"Longtime customers of a family hardware store that went up for sale after 100 years.", t:"for sale after 100"},
+    {q:"He was loved and missed.", who:"On a soldier missing since World War II, finally brought home to Connecticut.", t:"Remains of soldier"},
+    {q:"It&rsquo;s a game-changer.", who:"On a domestic violence screening tool used by Connecticut police.", t:"screening tool"},
+    {q:"The law really hasn&rsquo;t kept up with technology.", who:"On CTDOT&rsquo;s push for new distracted-driving laws.", t:"distracted driving"},
+    {q:"This wasn&rsquo;t an easy decision.", who:"The owners of a longtime specialty market, on closing after decades.", t:"specialty market"},
+    {q:"Trying to make a melting pot of food.", who:"A couple bringing a taste of their homeland to a new restaurant.", t:"homeland"}
+  ];
+  const wrap = document.getElementById("qwrap"), dots = document.getElementById("qdots"), prog = document.getElementById("prog");
+  let i = 0, timer = null, paused = false;
+  dots.innerHTML = Q.map((_,n)=>`<button class="dot" type="button" aria-label="Quote ${n+1}"></button>`).join("");
+  const dotEls = [...dots.children];
+  function show(n){
+    i = (n + Q.length) % Q.length;
+    const c = byT(Q[i].t);
+    wrap.innerHTML = `<figure class="qslide in"><blockquote>&ldquo;${Q[i].q}&rdquo;</blockquote><figcaption>${Q[i].who} <a href="${safeUrl(c.u)}" target="_blank" rel="noopener noreferrer">Read the story</a></figcaption></figure>`;
+    dotEls.forEach((d,j)=>d.setAttribute("aria-current", j===i));
+    prog.classList.remove("run"); void prog.offsetWidth; if(!paused && !reduce) prog.classList.add("run");
+  }
+  let seen = true;
+  function start(){ clearInterval(timer); if(!reduce) timer = setInterval(()=>{ if(!paused && seen && !document.hidden) show(i+1); }, 6000); }
+  new IntersectionObserver(([e]) => { seen = e.isIntersecting; prog.style.animationPlayState = seen ? "running" : "paused"; }).observe(document.getElementById("quotes"));
+  let sx = null;
+  wrap.addEventListener("pointerdown", e => { sx = e.clientX; });
+  wrap.addEventListener("pointerup", e => { if (sx == null) return; const dx = e.clientX - sx; sx = null;
+    if (Math.abs(dx) > 40){ show(i + (dx < 0 ? 1 : -1)); start(); } });
+  dotEls.forEach((d,j)=>d.onclick=()=>{ show(j); start(); });
+  const box = document.getElementById("quotes");
+  box.addEventListener("mouseenter", ()=>{ paused=true; prog.style.animationPlayState="paused"; });
+  box.addEventListener("mouseleave", ()=>{ paused=false; prog.style.animationPlayState="running"; });
+  show(0); start();
+})();
+
+/* ---------- Bio expand ---------- */
+document.getElementById("bioBtn").onclick = function(){
+  const o = document.getElementById("bioBox").classList.toggle("open");
+  this.setAttribute("aria-expanded", o); this.innerHTML = o ? "Show less &uarr;" : "Full bio &rarr;";
+};
+</script>
+
+</body>
+</html>
