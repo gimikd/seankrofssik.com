@@ -30,11 +30,13 @@ jobs:
         run: python3 -I scripts/update_stories.py
 
       - name: Save new stories to the repo
+        id: save
         if: github.event_name != 'push'
         run: |
           if git diff --quiet -- site/stories.json; then
             echo "No new stories."
           else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             git config user.name "seankrofssik-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add site/stories.json
@@ -42,9 +44,21 @@ jobs:
             git push
           fi
 
+      - name: Build story list, structured data, feed and llms.txt for search engines and AI agents
+        run: python3 -I scripts/build_seo.py
+
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: site
       - id: deploy
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+
+      - name: Tell search engines the site changed (IndexNow)
+        if: github.event_name == 'push' || steps.save.outputs.changed == 'true'
+        continue-on-error: true
+        run: |
+          curl -sS -m 30 -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{"host":"seankrofssik.com","key":"ee3b9dd07fe813e793a10634d43554d2","keyLocation":"https://seankrofssik.com/ee3b9dd07fe813e793a10634d43554d2.txt","urlList":["https://seankrofssik.com/","https://seankrofssik.com/llms.txt","https://seankrofssik.com/feed.xml"]}' \
+            -w "IndexNow HTTP %{http_code}\n"
