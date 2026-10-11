@@ -11,6 +11,7 @@ It merges the stories built into index.html with site/stories.json, then writes:
   - feed.xml   RSS feed of the newest stories
   - llms.txt   plain-text summary for AI agents
   - sitemap.xml with an up-to-date lastmod
+  - one page per topic (/courts/, /transportation/, ...) listing matching stories
 
 Only headlines, dates, outlet names and links are published. No article text.
 """
@@ -155,7 +156,7 @@ def feed_xml(stories, now):
             "<language>en-us</language>\n<lastBuildDate>%s</lastBuildDate>\n%s\n</channel>\n</rss>\n"
             % (SITE, SITE, format_datetime(now), "\n".join(items)))
 
-def llms_txt(stories, today):
+def llms_txt(stories, today, groups=None):
     lines = [
         "# Sean Krofssik",
         "",
@@ -180,16 +181,205 @@ def llms_txt(stories, today):
         "- [X @SKrofssik](https://x.com/SKrofssik): best way to send a story idea or tip",
         "- [RSS feed](%sfeed.xml) and [JSON list](%sstories.json) of stories" % (SITE, SITE),
         "",
-        "## Stories (newest first, updated %s)" % today,
     ]
+    if groups:
+        lines += ["## Topics"] + ["- [%s](%s%s/): %d stories" % (t["h1"], SITE, t["slug"], len(groups[t["slug"]]))
+                                  for t in TOPICS if t["slug"] in groups] + [""]
+    lines += ["## Stories (newest first, updated %s)" % today]
     for s in stories:
         lines.append("- [%s](%s): %s, %s, %s" % (s["t"].replace("[", "(").replace("]", ")"), s["u"], outlet(s),
                                                  SECTIONS.get(s.get("s"), "Community"), nice_date(s["d"])))
     return "\n".join(lines) + "\n"
 
-def sitemap(today):
+def sitemap(today, slugs=()):
+    urls = [SITE] + [SITE + s + "/" for s in slugs]
+    rows = "".join("  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>daily</changefreq></url>\n" % (u, today) for u in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            "  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>daily</changefreq></url>\n</urlset>\n" % (SITE, today))
+            + rows + "</urlset>\n")
+
+# ---------- Topic pages ----------
+# Each topic gets its own page at /<slug>/ listing the matching stories.
+# A story can be on more than one topic page.
+TOPICS = [
+    {"slug": "courts", "nav": "Courts & crime",
+     "h1": "Connecticut courts, crime and police",
+     "title": "Connecticut Courts, Crime and Police Stories | Sean Krofssik",
+     "desc": "Stories by Hartford Courant reporter Sean Krofssik on Connecticut courts, arrests, crime and police.",
+     "intro": "I report on arrests, court cases and police across Connecticut for the Hartford Courant. These are those stories, newest first.",
+     "re": r"\b(arrest\w*|charged|charges|convict\w*|appeal|courts?|police|officers?|shooting|shot|suspect|stabb\w*|sentenc\w*|DUI|hit-and-run|attorney|corruption|cockfighting|lawsuit|judge|trial|gun)\b",
+     "case_re": r"\bICE\b"},
+    {"slug": "transportation", "nav": "Roads & traffic",
+     "h1": "Connecticut roads, highways and traffic",
+     "title": "Connecticut Roads, Highways and Traffic Stories | Sean Krofssik",
+     "desc": "Stories by Hartford Courant reporter Sean Krofssik on Connecticut highways, CTDOT projects, lane closures, crashes and road safety.",
+     "intro": "Highway projects, lane closures, crashes and the push for safer roads. I cover a lot of transportation news for the Hartford Courant.",
+     "re": r"\b(highways?|I-\d+|exits?|lanes?|traffic|CTDOT|DOT|bridges?|intersections?|roads?|roadways?|wrong[- ]way|driv(ing|ers?)|crash(es)?|rail|speed cameras|ferry|pedestrians?|motorcycle|transportation|interchange|detours?|motorists)\b"},
+    {"slug": "fires-floods", "nav": "Fires & floods",
+     "h1": "Fires, floods and emergencies in Connecticut",
+     "title": "Connecticut Fires, Floods and Emergencies | Sean Krofssik",
+     "desc": "Stories by Hartford Courant reporter Sean Krofssik on fires, flash flooding, rescues and the firefighters who respond across Connecticut.",
+     "intro": "Fires, flash floods, rescues and the volunteer and career firefighters who respond to them.",
+     "re": r"\b(fires?|firefighters?|firehouse|flood\w*|rescues?|displaced|rain bomb|three-alarm|smoke)\b"},
+    {"slug": "business", "nav": "Business", "section": "biz",
+     "h1": "Connecticut business, restaurants and shopping",
+     "title": "Connecticut Business, Restaurant and Shopping Stories | Sean Krofssik",
+     "desc": "Stories by Hartford Courant reporter Sean Krofssik on new restaurants, shops, malls and family-owned businesses across Connecticut.",
+     "intro": "New restaurants, shops opening and closing, and family businesses passed down to the next generation.",
+     "re": r"\b(restaurants?|cafe|bakery|diner|stores?|shops?|shoppers|mall|business(es)?|chains?|grocery|company|boutique|retailer|menus?|downtown|storeowner|headquarters|winery)\b"},
+    {"slug": "health", "nav": "Health", "section": "health",
+     "h1": "Health and hospitals in Connecticut",
+     "title": "Connecticut Health and Hospital Stories | Sean Krofssik",
+     "desc": "Stories by Hartford Courant reporter Sean Krofssik on Connecticut hospitals, doctors, patients, researchers and public health.",
+     "intro": "Hospitals, doctors, researchers and patients in Connecticut, and the groups working to help people.",
+     "re": r"\b(health|hospitals?|hospitalized|doctors?|patients?|cancer|nurses?|overdose|mental|medical|rehabilitation|shelter|therapy|surgery)\b"},
+    {"slug": "community", "nav": "Community", "section": "com", "fallback": True,
+     "h1": "Connecticut people and communities",
+     "title": "Connecticut People and Community Stories | Sean Krofssik",
+     "desc": "Stories by Hartford Courant reporter Sean Krofssik on the people, events and local history of Connecticut towns.",
+     "intro": "People, events and local history from towns across Connecticut.",
+     "re": None},
+    {"slug": "sports", "nav": "Sports", "section": "sports",
+     "h1": "Connecticut sports",
+     "title": "Connecticut Sports Stories | Sean Krofssik",
+     "desc": "Sports stories by Sean Krofssik, who covered high school and community sports for the Record-Journal in Meriden for 19 years.",
+     "intro": "I spent 19 years covering high school and community sports for the Record-Journal in Meriden. These are the sports stories collected on this site.",
+     "re": r"\b(sports?|softball|cyclist|fish|stadium|pickleball|NHL|swords)\b"},
+]
+MIN_TOPIC = 5
+
+def sort_topics(stories):
+    out = {t["slug"]: [] for t in TOPICS}
+    for s in stories:
+        hit = False
+        for t in TOPICS:
+            if t.get("fallback"):
+                continue
+            m = (t.get("section") and s.get("s") == t["section"]) or \
+                (t["re"] and re.search(t["re"], s["t"], re.I)) or \
+                (t.get("case_re") and re.search(t["case_re"], s["t"]))
+            if m:
+                out[t["slug"]].append(s); hit = True
+        fb = [t for t in TOPICS if t.get("fallback")][0]
+        if not hit or s.get("s") == fb.get("section"):
+            out[fb["slug"]].append(s)
+    return {k: v for k, v in out.items() if len(v) >= MIN_TOPIC}
+
+TOPIC_CSS = (".topics{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px auto 0;max-width:820px}"
+             ".topics .lbl{flex-basis:100%;text-align:center;font-family:var(--cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:15px;color:var(--ink-3)}"
+             ".topics a{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);padding:9px 14px;text-decoration:none;font-weight:600;font-size:16px;background:var(--paper);transition:background .2s,color .2s}"
+             ".topics a:hover{background:#000;color:#fff}"
+             ".topics a .n{font-family:var(--mono);font-size:12px;font-weight:400;color:var(--ink-3)}"
+             ".topics a:hover .n{color:#CFCFCF}"
+             ".topics a[aria-current]{background:#000;color:#fff}")
+
+def topics_nav(groups, current=None, label="Browse by topic"):
+    links = []
+    for t in TOPICS:
+        if t["slug"] not in groups:
+            continue
+        cur = ' aria-current="page"' if t["slug"] == current else ""
+        links.append('<a href="/%s/"%s>%s <span class="n">%d</span></a>' % (t["slug"], cur, esc(t["nav"]), len(groups[t["slug"]])))
+    return '<nav class="topics" aria-label="Story topics"><span class="lbl">%s</span>%s</nav>' % (label, "".join(links))
+
+BEACON = ('<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" '
+          "data-cf-beacon='{\"token\": \"5277b77fd1b84ae89d5bdb1a8dedf65e\"}'></script>")
+TOPIC_CSP = ("default-src 'none'; script-src https://static.cloudflareinsights.com; style-src 'unsafe-inline' https://fonts.googleapis.com; "
+             "font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://cloudflareinsights.com; "
+             "base-uri 'none'; form-action 'none'; upgrade-insecure-requests")
+
+def topic_page(t, stories, groups, page_src, today):
+    style = re.search(r"<style>(.*?)</style>", page_src, re.S).group(1)
+    fonts = re.search(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com/css2[^"]*">', page_src).group(0)
+    url = SITE + t["slug"] + "/"
+    direct = [s for s in stories if DIRECT.match(s["u"])]
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": url + "#page", "url": url, "name": t["title"], "description": t["desc"],
+         "isPartOf": {"@id": SITE + "#site"}, "about": {"@id": SITE + "#sean"}, "dateModified": today,
+         "breadcrumb": {"@id": url + "#crumbs"}, "mainEntity": {"@id": url + "#list"}},
+        {"@type": "BreadcrumbList", "@id": url + "#crumbs", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Sean Krofssik", "item": SITE},
+            {"@type": "ListItem", "position": 2, "name": t["h1"], "item": url}]},
+        {"@type": "ItemList", "@id": url + "#list", "numberOfItems": len(direct),
+         "itemListElement": [{"@type": "ListItem", "position": i + 1,
+                              "item": {"@type": "NewsArticle", "headline": s["t"][:110], "url": s["u"], "datePublished": s["d"],
+                                       "author": {"@type": "Person", "@id": SITE + "#sean", "name": "Sean Krofssik", "url": SITE},
+                                       "publisher": {"@type": "NewsMediaOrganization", "name": outlet(s)}}}
+                             for i, s in enumerate(direct)]},
+    ]}
+    ldtxt = json.dumps(ld, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    extra = (".top .wrap{min-height:64px}.home-link{color:#fff;text-decoration:none;font-weight:600;font-size:16px;"
+             "padding:8px 12px;border:1px solid #666;border-radius:4px;white-space:nowrap}.home-link:hover{background:#222}"
+             ".crumbs{margin-top:22px;font-size:15px;color:var(--ink-3)}.crumbs a{color:var(--ink-3)}"
+             ".title-box p{max-width:62ch;margin-inline:auto}" + TOPIC_CSS)
+    return """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="%(csp)s">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>%(title)s</title>
+<meta name="description" content="%(desc)s">
+<link rel="canonical" href="%(url)s">
+<meta name="author" content="Sean Krofssik">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sean Krofssik">
+<meta property="og:title" content="%(title)s">
+<meta property="og:description" content="%(desc)s">
+<meta property="og:url" content="%(url)s">
+<meta property="og:image" content="%(site)sog-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@SKrofssik">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Stories by Sean Krofssik" href="%(site)sfeed.xml">
+<script type="application/ld+json">%(ld)s</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+%(fonts)s
+<style>%(style)s
+%(extra)s</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><b>Sean Krofssik</b><span>Reporter, Hartford Courant</span></a>
+    <a class="home-link" href="/#articles">All stories</a>
+  </div>
+</header>
+<main class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Sean Krofssik</a> / <span>%(nav)s</span></nav>
+  <section class="box title-box">
+    <h1>%(h1)s</h1>
+    <p>%(intro)s</p>
+  </section>
+  <section class="box" aria-labelledby="list-h">
+    <h2 id="list-h">%(count)d stories</h2>
+    <p class="lead">Newest first. Each one links to the original story.</p>
+    %(cards)s
+  </section>
+  <section class="box" aria-labelledby="more-h">
+    <h2 id="more-h">More topics</h2>
+    %(topics)s
+  </section>
+</main>
+<footer>
+  <div class="wrap row">
+    <a class="brand" href="/"><b>Sean Krofssik</b><span>Reporter, Hartford Courant</span></a>
+    <nav aria-label="Footer"><a href="/#articles">Articles</a><a href="/#career">Career</a><a href="/#bio">Bio</a><a href="/#contact">Contact</a></nav>
+    <div>&copy; Sean Krofssik. This is my personal site, not a Hartford Courant site. Headlines link to the original stories, which belong to their publishers.</div>
+  </div>
+</footer>
+%(beacon)s
+</body>
+</html>
+""" % {"csp": TOPIC_CSP, "title": esc(t["title"]), "desc": esc(t["desc"]), "url": url, "site": SITE, "ld": ldtxt,
+       "fonts": fonts, "style": style, "extra": extra, "nav": esc(t["nav"]), "h1": esc(t["h1"]), "intro": esc(t["intro"]),
+       "count": len(stories), "cards": cards_html(stories), "topics": topics_nav(groups, current=t["slug"], label="Browse by topic"),
+       "beacon": BEACON}
 
 def replace_between(page, name, content):
     a, b = "<!-- SEO:%s:START -->" % name, "<!-- SEO:%s:END -->" % name
@@ -206,12 +396,22 @@ def main():
         sys.exit("build_seo: only %d stories found, refusing to publish a thin page" % len(stories))
     now = datetime.now(timezone.utc)
     today = now.strftime("%Y-%m-%d")
+    groups = sort_topics(stories)
+    src = page
+    for t in TOPICS:
+        if t["slug"] in groups:
+            os.makedirs(os.path.join(ROOT, t["slug"]), exist_ok=True)
+            with open(os.path.join(ROOT, t["slug"], "index.html"), "w", encoding="utf-8") as f:
+                f.write(topic_page(t, groups[t["slug"]], groups, src, today))
     page = replace_between(page, "ARCHIVE", cards_html(stories))
     page = replace_between(page, "JSONLD", jsonld(stories, today))
+    if "<!-- SEO:TOPICS:START -->" in page:
+        page = replace_between(page, "TOPICS", "<style>" + TOPIC_CSS + "</style>" + topics_nav(groups))
     open(idx, "w", encoding="utf-8").write(page)
     open(os.path.join(ROOT, "feed.xml"), "w", encoding="utf-8").write(feed_xml(stories, now))
-    open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms_txt(stories, today))
-    open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sitemap(today))
+    open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms_txt(stories, today, groups))
+    open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sitemap(today, [t["slug"] for t in TOPICS if t["slug"] in groups]))
+    print("build_seo: topic pages: " + ", ".join("%s (%d)" % (k, len(v)) for k, v in groups.items()))
     direct = sum(1 for s in stories if DIRECT.match(s["u"]))
     print("build_seo: %d stories (%d direct links) written to index.html, feed.xml, llms.txt, sitemap.xml" % (len(stories), direct))
     return 0
