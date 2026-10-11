@@ -9,7 +9,7 @@ import html, json, os, re, sys, time, urllib.request
 from datetime import datetime, timezone
 
 SOURCE = "https://www.courant.com/author/sean-krofssik/"
-PAGES = 3
+PAGES = 12
 MAX_STORIES = 600
 OUT = os.path.join(os.path.dirname(__file__), "..", "site", "stories.json")
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
