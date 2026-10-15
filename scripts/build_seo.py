@@ -264,13 +264,20 @@ def sort_topics(stories):
             out[fb["slug"]].append(s)
     return {k: v for k, v in out.items() if len(v) >= MIN_TOPIC}
 
-TOPIC_CSS = (".topics{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px auto 0;max-width:820px}"
+TOPIC_CSS = (".topics{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:26px auto 0;max-width:840px}"
              ".topics .lbl{flex-basis:100%;text-align:center;font-family:var(--cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:15px;color:var(--ink-3)}"
-             ".topics a{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);padding:9px 14px;text-decoration:none;font-weight:600;font-size:16px;background:var(--paper);transition:background .2s,color .2s}"
-             ".topics a:hover{background:#000;color:#fff}"
+             ".topics a{--c:#0F6B72;display:inline-flex;align-items:center;gap:8px;min-height:44px;border:1.5px solid var(--line);border-bottom-width:5px;border-radius:8px;"
+             "padding:8px 15px 6px;text-decoration:none;font-weight:600;font-size:16px;color:var(--ink);background:var(--paper);"
+             "transition:transform .08s ease,border-bottom-width .08s ease,background .15s,color .15s}"
+             ".topics a:nth-of-type(5n+2){--c:#E4572E}.topics a:nth-of-type(5n+3){--c:#F2B134}.topics a:nth-of-type(5n+4){--c:#2E86DE}.topics a:nth-of-type(5n){--c:#6AB04C}"
+             ".topics a:hover{transform:translateY(-2px)}"
+             ".topics a:active{transform:translateY(3px);border-bottom-width:2px;background:var(--c);color:#fff}"
+             ".topics a:nth-of-type(5n+3):active{color:var(--ink)}"
              ".topics a .n{font-family:var(--mono);font-size:12px;font-weight:400;color:var(--ink-3)}"
-             ".topics a:hover .n{color:#CFCFCF}"
-             ".topics a[aria-current]{background:#000;color:#fff}")
+             ".topics a:active .n{color:inherit}"
+             ".topics a[aria-current]{background:#000;color:#fff;border-color:#000;border-bottom-color:#444}"
+             ".topics a[aria-current] .n{color:#CFCFCF}"
+             "@media (prefers-reduced-motion: reduce){.topics a{transition:none}}")
 
 def topics_nav(groups, current=None, label="Browse by topic"):
     links = []
