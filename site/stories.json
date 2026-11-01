@@ -1,48 +1,12 @@
 {
- "updated": "2026-10-31T12:44:39+00:00",
+ "updated": "2026-11-01T03:49:41+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
-  {
-   "s": "safety",
-   "d": "2026-10-30",
-   "t": "Man in critical condition following shooting in Hartford",
-   "u": "https://www.courant.com/2026/10/30/man-in-critical-condition-following-shooting-in-hartford-3/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-30",
-   "t": "Police arrest mother of Eve Rogers, 12-year-old found dead in Enfield home",
-   "u": "https://www.courant.com/2026/10/30/police-mother-of-eve-rogers-12-year-old-girl-found-dead-in-enfield-home-arrested/"
-  },
   {
    "s": "biz",
    "d": "2026-10-29",
    "t": "CT mom of three changed careers to spend more time with kids. Her growing bakery business is booming",
    "u": "https://www.courant.com/2026/10/29/ct-mom-of-three-changed-career-to-spend-more-time-with-kids-her-growing-bakery-business-is-booming/"
-  },
-  {
-   "s": "com",
-   "d": "2026-10-29",
-   "t": "Patrick Stewart, of ‘Star Trek’ and ‘X-Men’ fame, dies at 86",
-   "u": "https://www.courant.com/2026/10/29/patrick-stewart-star-trek-dies/"
-  },
-  {
-   "s": "com",
-   "d": "2026-10-28",
-   "t": "Massachusetts man convicted of sexually assaulting 10-year-old girl in CT",
-   "u": "https://www.courant.com/2026/10/28/massachusetts-man-convicted-of-sexually-assaulting-10-year-old-girl-in-ct/"
-  },
-  {
-   "s": "com",
-   "d": "2026-10-28",
-   "t": "CT DPH confirms 6 flu deaths since September; 9 COVID deaths",
-   "u": "https://www.courant.com/2026/10/28/ct-dph-confirms-6-flu-deaths-since-september-9-covid-deaths/"
-  },
-  {
-   "s": "com",
-   "d": "2026-10-26",
-   "t": "Law firm that was target of grievance condemns CT city for deprivation of free ‘speech’. It seeks payment.",
-   "u": "https://www.courant.com/2026/10/26/law-firm-that-was-target-of-grievance-condemns-ct-city-for-deprivation-of-free-speech-it-seeks-payment/"
   },
   {
    "s": "biz",
@@ -57,34 +21,16 @@
    "u": "https://www.courant.com/2026/10/26/a-7m-renovation-of-a-major-ct-parking-garage-is-underway-it-brings-in-revenue-and-connects-to-amenities/"
   },
   {
-   "s": "safety",
-   "d": "2026-10-25",
-   "t": "CT man charged with negligent homicide in connection with fatal three-car crash in Somers",
-   "u": "https://www.courant.com/2026/10/25/ct-man-charged-with-negligent-homicide-in-connection-with-fatal-three-car-crash-in-somers/"
-  },
-  {
    "s": "health",
    "d": "2026-10-25",
    "t": "Health emergency robbed CT musician of abilities to play guitar. It led him to even greater success",
    "u": "https://www.courant.com/2026/10/25/health-emergency-robbed-ct-musician-of-abilities-to-play-guitar-it-led-him-to-even-greater-success/"
   },
   {
-   "s": "biz",
-   "d": "2026-10-24",
-   "t": "Man dies after running into Meriden business for help following stabbing",
-   "u": "https://www.courant.com/2026/10/24/man-dead-after-running-into-meriden-business-for-help-following-stabbing/"
-  },
-  {
    "s": "safety",
    "d": "2026-10-23",
    "t": "Work on bridge replacement project slated to begin on CT interstate. Expect lane shifts and detours.",
    "u": "https://www.courant.com/2026/10/23/work-on-bridge-replacement-project-slated-to-begin-on-ct-interstate-expect-lane-shifts-and-detours/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-23",
-   "t": "Judge denies venue change for CT mother charged in death of 11-year-old daughter",
-   "u": "https://www.courant.com/2026/10/23/judge-denies-venue-change-for-ct-mother-charged-in-death-of-11-year-old-daughter/"
   },
   {
    "s": "safety",
@@ -99,40 +45,10 @@
    "u": "https://www.courant.com/2026/10/22/a-man-who-was-severely-burned-in-a-ct-fire-is-returning-to-the-state-heres-why-he-comes-back/"
   },
   {
-   "s": "safety",
-   "d": "2026-10-22",
-   "t": "One teen girl is dead, another injured following shooting at residence in Hartford",
-   "u": "https://www.courant.com/2026/10/22/one-teen-girl-is-dead-another-injured-following-shooting-at-home-in-hartford/"
-  },
-  {
-   "s": "com",
-   "d": "2026-10-21",
-   "t": "Gampel Pavilion to get new name as UConn reaches multiyear rights deal",
-   "u": "https://www.courant.com/2026/10/21/gampel-pavilion-to-get-new-name-as-uconn-reaches-multi-year-rights-deal/"
-  },
-  {
-   "s": "com",
-   "d": "2026-10-20",
-   "t": "Yale University employee shot during attempted carjacking",
-   "u": "https://www.courant.com/2026/10/20/yale-university-employee-shot-during-attempted-carjacking/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-20",
-   "t": "Viral video shows CT arrest that led to internal affairs investigation for CT state trooper",
-   "u": "https://www.courant.com/2026/10/20/viral-video-shows-ct-arrest-that-led-to-internal-affairs-investigation-for-ct-state-trooper/"
-  },
-  {
    "s": "health",
    "d": "2026-10-19",
    "t": "CT man in his 70’s scores new record deal. The musical renaissance came after a knee replacement.",
    "u": "https://www.courant.com/2026/10/19/ct-man-in-his-70s-scores-new-record-deal-the-musical-reconnaissance-came-after-a-knee-replacement/"
-  },
-  {
-   "s": "health",
-   "d": "2026-10-19",
-   "t": "Medical examiner determines cause of death of 12-year-old girl found in CT home",
-   "u": "https://www.courant.com/2026/10/19/medical-examiner-determines-cause-of-death-of-12-year-old-girl-found-in-ct-home/"
   },
   {
    "s": "com",
@@ -147,22 +63,10 @@
    "u": "https://www.courant.com/2026/10/18/ct-man-suffers-life-threatening-injuries-after-being-struck-by-a-car-in-parking-lot/"
   },
   {
-   "s": "safety",
-   "d": "2026-10-17",
-   "t": "One person dead after well-being check leads to officer-involved shooting in Bristol",
-   "u": "https://www.courant.com/2026/10/17/one-person-dead-after-well-being-check-leads-to-officer-involved-shooting-in-bristol/"
-  },
-  {
    "s": "health",
    "d": "2026-10-17",
    "t": "A nutritional craze is sweeping across the nation. CT experts break down its pros and cons.",
    "u": "https://www.courant.com/2026/10/17/a-nutritional-craze-is-sweeping-across-the-nation-ct-experts-break-down-its-pros-and-cons/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-16",
-   "t": "Katie Zacharia Is Out After 5 Days as White House Press Secretary",
-   "u": "https://www.courant.com/2026/10/16/katie-zacharia-is-out-after-5-days-as-white-house-press-secretary/"
   },
   {
    "s": "biz",
@@ -172,33 +76,15 @@
   },
   {
    "s": "safety",
-   "d": "2026-10-15",
-   "t": "Police: 22-year-old man in critical condition after being violently attacked in CT park",
-   "u": "https://www.courant.com/2026/10/15/homeless-man-in-critical-condition-after-being-violently-attacked-in-ct-park/"
-  },
-  {
-   "s": "safety",
    "d": "2026-10-14",
    "t": "He’s the only CT lawyer named as one of top in nation. You might not know his name, but you know cases he won",
    "u": "https://www.courant.com/2026/10/14/hes-the-only-ct-lawyer-named-as-one-of-top-in-nation-you-might-not-know-his-name-but-you-know-cases-he-won/"
   },
   {
    "s": "safety",
-   "d": "2026-10-14",
-   "t": "School crossing guard struck, killed in crash in Meriden",
-   "u": "https://www.courant.com/2026/10/14/school-crossing-guard-struck-killed-in-crash-in-meriden/"
-  },
-  {
-   "s": "safety",
    "d": "2026-10-13",
    "t": "A CT fire department’s been saving lives for 175 years. Showing off the milestone is ‘something to be proud of’",
    "u": "https://www.courant.com/2026/10/13/ct-city-celebrates-fire-departments-milestone-with-massive-exhibit-its-something-to-be-proud-of/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-13",
-   "t": "CT alleged road rage incident involving racial slur leads to charges and a viral social media video",
-   "u": "https://www.courant.com/2026/10/13/ct-alleged-road-rage-incident-involving-racial-slur-leads-to-charges-and-a-viral-social-media-video/"
   },
   {
    "s": "safety",
@@ -209,26 +95,8 @@
   {
    "s": "safety",
    "d": "2026-10-10",
-   "t": "Woman struck by car in hit-and-run collision in Putnam",
-   "u": "https://www.courant.com/2026/10/10/woman-struck-by-car-in-hit-and-run-collision-in-putnam/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-10",
    "t": "A major CT highway is about to renumber all of its exit signs. Here’s where and what to expect.",
    "u": "https://www.courant.com/2026/10/10/ctdot-officials-renumbering-exit-signs-on-a-major-ct-highway-heres-where-and-why/"
-  },
-  {
-   "s": "biz",
-   "d": "2026-10-09",
-   "t": "Convicted ex-CT official on lam wants to appeal conviction in federal corruption case",
-   "u": "https://www.courant.com/2026/10/09/kosta-diamantis-seeks-to-appeal-conviction-in-federal-corruption-case/"
-  },
-  {
-   "s": "biz",
-   "d": "2026-10-08",
-   "t": "Man arrested after allegedly stabbing security guard at CT movie theater",
-   "u": "https://www.courant.com/2026/10/08/man-arrested-after-allegedly-trying-to-stab-security-guard-at-ct-movie-theater/"
   },
   {
    "s": "biz",
@@ -241,12 +109,6 @@
    "d": "2026-10-07",
    "t": "CT elementary parents seek safety at dangerous intersection near school. Crossing guard sees daily near misses",
    "u": "https://www.courant.com/2026/10/07/parents-at-ct-elementary-school-fighting-for-safety-measures-at-dangerous-intersection-near-building/"
-  },
-  {
-   "s": "safety",
-   "d": "2026-10-05",
-   "t": "UConn assistant coach facing multiple charges in connection with Tolland crash",
-   "u": "https://www.courant.com/2026/10/05/uconn-assistant-coach-facing-multiple-charges-in-connection-with-tolland-crash/"
   },
   {
    "s": "biz",
@@ -950,5 +812,45 @@
    "t": "CT plans $10 million project to improve multiple busy intersections. Here’s where and how.",
    "u": "https://www.courant.com/2026/05/12/ct-plans-10-million-project-to-improve-multiple-busy-intersections-heres-where-and-how/"
   }
+ ],
+ "verified": [
+  "https://www.courant.com/2026/09/03/popular-restaurant-famous-for-its-hot-oil-pies-is-expanding-in-ct-heres-where-its-coming-next/",
+  "https://www.courant.com/2026/09/04/ct-woman-is-raising-money-to-help-her-family-rebuild-in-nepal-following-devastating-flooding/",
+  "https://www.courant.com/2026/09/06/suspect-bites-ct-police-dog-after-attempting-to-flee-police-following-stop/",
+  "https://www.courant.com/2026/09/07/ct-lawmaker-seeks-moratorium-on-new-data-centers-in-state-he-wants-people-and-the-environment-protected/",
+  "https://www.courant.com/2026/09/08/tipping-in-nontraditional-places-becoming-annoyance-for-consumers-ct-experts-say/",
+  "https://www.courant.com/2026/09/10/mothers-journey-to-save-2-year-old-son-has-brought-her-to-five-states-and-a-temporary-stay-in-ct/",
+  "https://www.courant.com/2026/09/11/historic-ct-based-ship-among-two-vessels-on-new-stamp-honoring-u-s-coast-guard-our-nation-commemorates/",
+  "https://www.courant.com/2026/09/13/ct-mall-is-adding-a-new-anchor-geared-toward-families-it-includes-go-kart-track-and-trampoline-park/",
+  "https://www.courant.com/2026/09/13/flash-flooding-causes-road-closures-in-parts-of-ct-warnings-remain-until-just-after-noon/",
+  "https://www.courant.com/2026/09/14/new-ct-food-pantry-to-serve-overlooked-community-it-offers-communication-accessible-environment/",
+  "https://www.courant.com/2026/09/14/rain-bomb-led-to-flash-flooding-in-shoreline-towns-in-ct-some-got-more-than-7-inches/",
+  "https://www.courant.com/2026/09/17/ct-based-nonprofit-has-impacted-more-than-1500-lives-how-they-do-it/",
+  "https://www.courant.com/2026/09/18/theyre-part-of-the-family-of-man-known-as-americas-first-spy-why-they-will-gather-in-ct-250-years-later/",
+  "https://www.courant.com/2026/09/21/ctdots-wrong-way-driving-program-is-leading-the-way-in-preventing-tragedies-its-saving-lives/",
+  "https://www.courant.com/2026/09/21/yearly-ct-event-that-drew-18000-people-to-end-regular-attendees-lament-loss-of-a-favorite/",
+  "https://www.courant.com/2026/09/22/people-are-using-social-media-trends-to-get-a-good-nights-sleep-ct-doctors-it-can-cause-more-harm/",
+  "https://www.courant.com/2026/09/23/road-safety-improvements-are-raising-concerns-in-one-ct-town-heres-why-the-mayor-opposes-the-plan/",
+  "https://www.courant.com/2026/09/24/ct-winery-is-bringing-back-a-fall-tradition-it-includes-a-legendary-competition-that-gets-very-messy/",
+  "https://www.courant.com/2026/09/26/ct-owned-intersections-are-getting-video-detection-upgrades-heres-what-that-means-for-drivers/",
+  "https://www.courant.com/2026/10/05/popular-ct-daycare-thats-bleeding-money-says-its-forced-to-close-why-parents-decided-to-try-to-save-it/",
+  "https://www.courant.com/2026/10/07/parents-at-ct-elementary-school-fighting-for-safety-measures-at-dangerous-intersection-near-building/",
+  "https://www.courant.com/2026/10/08/ct-couple-starts-bakery-business-out-of-their-apartments-kitchen-it-sells-out-nearly-every-week/",
+  "https://www.courant.com/2026/10/10/ctdot-officials-renumbering-exit-signs-on-a-major-ct-highway-heres-where-and-why/",
+  "https://www.courant.com/2026/10/11/one-dead-another-in-critical-condition-following-ct-crash/",
+  "https://www.courant.com/2026/10/13/ct-city-celebrates-fire-departments-milestone-with-massive-exhibit-its-something-to-be-proud-of/",
+  "https://www.courant.com/2026/10/14/hes-the-only-ct-lawyer-named-as-one-of-top-in-nation-you-might-not-know-his-name-but-you-know-cases-he-won/",
+  "https://www.courant.com/2026/10/15/new-freestyle-restaurant-in-ct-mixes-traditional-italian-with-other-tastes-everything-has-a-twist/",
+  "https://www.courant.com/2026/10/17/a-nutritional-craze-is-sweeping-across-the-nation-ct-experts-break-down-its-pros-and-cons/",
+  "https://www.courant.com/2026/10/18/a-ct-woman-suddenly-learned-she-could-vote-thats-despite-a-state-office-getting-0-to-do-voter-education/",
+  "https://www.courant.com/2026/10/18/ct-man-suffers-life-threatening-injuries-after-being-struck-by-a-car-in-parking-lot/",
+  "https://www.courant.com/2026/10/19/ct-man-in-his-70s-scores-new-record-deal-the-musical-reconnaissance-came-after-a-knee-replacement/",
+  "https://www.courant.com/2026/10/22/a-man-who-was-severely-burned-in-a-ct-fire-is-returning-to-the-state-heres-why-he-comes-back/",
+  "https://www.courant.com/2026/10/22/lane-and-ramp-closures-expected-on-busy-ct-highway-heres-where-and-why/",
+  "https://www.courant.com/2026/10/23/work-on-bridge-replacement-project-slated-to-begin-on-ct-interstate-expect-lane-shifts-and-detours/",
+  "https://www.courant.com/2026/10/25/health-emergency-robbed-ct-musician-of-abilities-to-play-guitar-it-led-him-to-even-greater-success/",
+  "https://www.courant.com/2026/10/26/a-7m-renovation-of-a-major-ct-parking-garage-is-underway-it-brings-in-revenue-and-connects-to-amenities/",
+  "https://www.courant.com/2026/10/26/a-ct-woman-left-the-corporate-world-to-open-an-art-cafe-she-wanted-to-have-a-space-for-everyone/",
+  "https://www.courant.com/2026/10/29/ct-mom-of-three-changed-career-to-spend-more-time-with-kids-her-growing-bakery-business-is-booming/"
  ]
 }
