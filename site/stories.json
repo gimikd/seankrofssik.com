@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-01T17:58:59+00:00",
+ "updated": "2026-11-02T06:22:09+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
+  {
+   "s": "health",
+   "d": "2026-11-01",
+   "t": "CT U.S. Sen. Murphy suffers stroke. Doctors optimistic he will make full recovery.",
+   "u": "https://www.courant.com/2026/11/01/ct-u-s-sen-murphy-suffers-stroke-doctors-optimistic-he-will-make-full-recovery/"
+  },
+  {
+   "s": "com",
+   "d": "2026-11-01",
+   "t": "Lamont accused of touching reporter’s phone at rally. Incident draws rebuke from Fazio.",
+   "u": "https://www.courant.com/2026/11/01/lamont-accused-of-touching-reporters-phone-at-rally-incident-draws-rebuke-from-fazio/"
+  },
   {
    "s": "biz",
    "d": "2026-10-29",
@@ -948,6 +960,8 @@
   "https://www.courant.com/2026/10/25/health-emergency-robbed-ct-musician-of-abilities-to-play-guitar-it-led-him-to-even-greater-success/",
   "https://www.courant.com/2026/10/26/a-7m-renovation-of-a-major-ct-parking-garage-is-underway-it-brings-in-revenue-and-connects-to-amenities/",
   "https://www.courant.com/2026/10/26/a-ct-woman-left-the-corporate-world-to-open-an-art-cafe-she-wanted-to-have-a-space-for-everyone/",
-  "https://www.courant.com/2026/10/29/ct-mom-of-three-changed-career-to-spend-more-time-with-kids-her-growing-bakery-business-is-booming/"
+  "https://www.courant.com/2026/10/29/ct-mom-of-three-changed-career-to-spend-more-time-with-kids-her-growing-bakery-business-is-booming/",
+  "https://www.courant.com/2026/11/01/ct-u-s-sen-murphy-suffers-stroke-doctors-optimistic-he-will-make-full-recovery/",
+  "https://www.courant.com/2026/11/01/lamont-accused-of-touching-reporters-phone-at-rally-incident-draws-rebuke-from-fazio/"
  ]
 }
