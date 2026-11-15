@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-12T20:04:19+00:00",
+ "updated": "2026-11-15T18:57:14+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
+  {
+   "s": "safety",
+   "d": "2026-11-15",
+   "t": "Bradley flight picture changes after nationwide ground stop",
+   "u": "https://www.courant.com/2026/11/15/flights-bradley-airport-ground-stop/"
+  },
+  {
+   "s": "safety",
+   "d": "2026-11-15",
+   "t": "Busy CT road will be closing for multiple days in one direction",
+   "u": "https://www.courant.com/2026/11/15/busy-ct-road-will-be-closing-for-multiple-days-in-one-direction/"
+  },
+  {
+   "s": "safety",
+   "d": "2026-11-15",
+   "t": "CT DOT to use $7.7M in federal and state funds to improve safety at 35 railroad crossings",
+   "u": "https://www.courant.com/2026/11/15/dot-to-use-7-7m-in-federal-and-state-funds-to-improve-safety-at-35-railroad-crossings-on-hartford-line/"
+  },
+  {
+   "s": "biz",
+   "d": "2026-11-15",
+   "t": "National department store chain and Chinese fast-food chain in the works at busy CT plaza",
+   "u": "https://www.courant.com/2026/11/15/national-department-store-chain-and-chinese-fast-food-restaurant-chain-in-the-works-at-busy-ct-plaza/"
+  },
   {
    "s": "biz",
    "d": "2026-11-12",
@@ -1053,6 +1077,10 @@
   "https://www.courant.com/2026/11/10/childrens-clothing-retailer-files-for-bankruptcy-heres-what-ct-locations-are-at-risk-of-closing/",
   "https://www.courant.com/2026/11/11/ctdot-looking-for-ways-to-improve-safety-and-commuter-traffic-on-i-95-heres-some-options/",
   "https://www.courant.com/2026/11/11/mordente-has-aided-veterans-attending-scsu-for-47-years-setting-a-standard-of-service/",
-  "https://www.courant.com/2026/11/12/wine-focused-restaurant-proposed-for-ct-village-center-it-will-feature-a-small-plate-food-menu/"
+  "https://www.courant.com/2026/11/12/wine-focused-restaurant-proposed-for-ct-village-center-it-will-feature-a-small-plate-food-menu/",
+  "https://www.courant.com/2026/11/15/busy-ct-road-will-be-closing-for-multiple-days-in-one-direction/",
+  "https://www.courant.com/2026/11/15/dot-to-use-7-7m-in-federal-and-state-funds-to-improve-safety-at-35-railroad-crossings-on-hartford-line/",
+  "https://www.courant.com/2026/11/15/flights-bradley-airport-ground-stop/",
+  "https://www.courant.com/2026/11/15/national-department-store-chain-and-chinese-fast-food-restaurant-chain-in-the-works-at-busy-ct-plaza/"
  ]
 }
