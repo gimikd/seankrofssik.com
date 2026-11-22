@@ -1,7 +1,13 @@
 {
- "updated": "2026-11-19T20:46:54+00:00",
+ "updated": "2026-11-22T19:48:56+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
+  {
+   "s": "biz",
+   "d": "2026-11-22",
+   "t": "Rain this afternoon; chance of early snow forecasted for Thanksgiving",
+   "u": "https://www.courant.com/2026/11/22/rain-thanksgiving/"
+  },
   {
    "s": "biz",
    "d": "2026-11-19",
@@ -1102,6 +1108,7 @@
   "https://www.courant.com/2026/11/15/national-department-store-chain-and-chinese-fast-food-restaurant-chain-in-the-works-at-busy-ct-plaza/",
   "https://www.courant.com/2026/11/17/ct-experts-say-holiday-spending-is-expected-to-be-up-this-year-heres-why-and-where/",
   "https://www.courant.com/2026/11/18/scammers-targeting-shoppers-seeking-deep-discounts-on-toys-from-ct-based-company/",
-  "https://www.courant.com/2026/11/19/a-popular-asian-supermarket-chain-is-planning-to-open-its-first-ct-location-heres-where/"
+  "https://www.courant.com/2026/11/19/a-popular-asian-supermarket-chain-is-planning-to-open-its-first-ct-location-heres-where/",
+  "https://www.courant.com/2026/11/22/rain-thanksgiving/"
  ]
 }
