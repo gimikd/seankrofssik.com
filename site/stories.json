@@ -1,7 +1,13 @@
 {
- "updated": "2026-11-24T00:00:43+00:00",
+ "updated": "2026-11-24T10:03:26+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
+  {
+   "s": "biz",
+   "d": "2026-11-24",
+   "t": "CT farm sees higher demand for fresh turkeys this holiday. They’ve already ordered more for next year.",
+   "u": "https://www.courant.com/2026/11/24/ct-farm-sees-higher-demand-for-fresh-turkeys-this-holiday-theyve-already-ordered-more-for-next-year/"
+  },
   {
    "s": "safety",
    "d": "2026-11-23",
@@ -1123,6 +1129,7 @@
   "https://www.courant.com/2026/11/19/a-popular-asian-supermarket-chain-is-planning-to-open-its-first-ct-location-heres-where/",
   "https://www.courant.com/2026/11/22/rain-thanksgiving/",
   "https://www.courant.com/2026/11/23/ct-dairy-queen/",
-  "https://www.courant.com/2026/11/23/ct-roads-and-airports-will-see-thousands-of-travelers-for-thanksgiving-heres-what-to-expect/"
+  "https://www.courant.com/2026/11/23/ct-roads-and-airports-will-see-thousands-of-travelers-for-thanksgiving-heres-what-to-expect/",
+  "https://www.courant.com/2026/11/24/ct-farm-sees-higher-demand-for-fresh-turkeys-this-holiday-theyve-already-ordered-more-for-next-year/"
  ]
 }
