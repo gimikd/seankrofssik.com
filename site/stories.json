@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-22T19:48:56+00:00",
+ "updated": "2026-11-24T00:00:43+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
+  {
+   "s": "safety",
+   "d": "2026-11-23",
+   "t": "CT roads and airports will see thousands of travelers for Thanksgiving. Here’s what to expect.",
+   "u": "https://www.courant.com/2026/11/23/ct-roads-and-airports-will-see-thousands-of-travelers-for-thanksgiving-heres-what-to-expect/"
+  },
+  {
+   "s": "biz",
+   "d": "2026-11-23",
+   "t": "Mini golf to reopen in plan for CT Dairy Queen property",
+   "u": "https://www.courant.com/2026/11/23/ct-dairy-queen/"
+  },
   {
    "s": "biz",
    "d": "2026-11-22",
@@ -1109,6 +1121,8 @@
   "https://www.courant.com/2026/11/17/ct-experts-say-holiday-spending-is-expected-to-be-up-this-year-heres-why-and-where/",
   "https://www.courant.com/2026/11/18/scammers-targeting-shoppers-seeking-deep-discounts-on-toys-from-ct-based-company/",
   "https://www.courant.com/2026/11/19/a-popular-asian-supermarket-chain-is-planning-to-open-its-first-ct-location-heres-where/",
-  "https://www.courant.com/2026/11/22/rain-thanksgiving/"
+  "https://www.courant.com/2026/11/22/rain-thanksgiving/",
+  "https://www.courant.com/2026/11/23/ct-dairy-queen/",
+  "https://www.courant.com/2026/11/23/ct-roads-and-airports-will-see-thousands-of-travelers-for-thanksgiving-heres-what-to-expect/"
  ]
 }
