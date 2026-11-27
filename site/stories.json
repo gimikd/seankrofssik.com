@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-25T21:49:17+00:00",
+ "updated": "2026-11-27T21:26:55+00:00",
  "source": "https://www.courant.com/author/sean-krofssik/",
  "stories": [
+  {
+   "s": "safety",
+   "d": "2026-11-27",
+   "t": "Black Friday shoppers are flooding this CT mall in hunt for bargains",
+   "u": "https://www.courant.com/2026/11/27/ct-black-friday/"
+  },
+  {
+   "s": "health",
+   "d": "2026-11-27",
+   "t": "CT resident fighting devastating injuries with help of family, friends",
+   "u": "https://www.courant.com/2026/11/27/ct-resident-fighting-devastating-injuries-with-help-of-family-friends/"
+  },
   {
    "s": "biz",
    "d": "2026-11-25",
@@ -1137,6 +1149,8 @@
   "https://www.courant.com/2026/11/23/ct-dairy-queen/",
   "https://www.courant.com/2026/11/23/ct-roads-and-airports-will-see-thousands-of-travelers-for-thanksgiving-heres-what-to-expect/",
   "https://www.courant.com/2026/11/24/ct-farm-sees-higher-demand-for-fresh-turkeys-this-holiday-theyve-already-ordered-more-for-next-year/",
-  "https://www.courant.com/2026/11/25/a-new-ct-trail-is-serving-up-a-unique-holiday-beverage-across-the-state-heres-how-to-get-a-taste/"
+  "https://www.courant.com/2026/11/25/a-new-ct-trail-is-serving-up-a-unique-holiday-beverage-across-the-state-heres-how-to-get-a-taste/",
+  "https://www.courant.com/2026/11/27/ct-black-friday/",
+  "https://www.courant.com/2026/11/27/ct-resident-fighting-devastating-injuries-with-help-of-family-friends/"
  ]
 }
